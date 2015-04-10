@@ -4,7 +4,7 @@ The Android Peace Corps volunteer openings app
 # Getting started
 If you are new to using git, go through the following short online tutorial. Using github for keeping up to date code is critical for wokring on team projects, *especially* with short timelines!
 
-[https://github.com/TeamGlobalApps/peace-corps-iOS.git](https://github.com/TeamGlobalApps/peace-corps-iOS.git)
+[https://try.github.io/levels/1/challenges/1](https://try.github.io/levels/1/challenges/1)
 
 Quick start: Run these commands either in a terminal (mac) or use a git shell donwloadable from github, such as the one [for mac](https://mac.github.com/).
 
