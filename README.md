@@ -1,6 +1,8 @@
 # peace-corps-iOS
 The Android Peace Corps volunteer openings app 
 
+Our change!
+
 # Using their API
 The API for getting job listings is open soruce and [available here with instructions](https://github.com/PeaceCorps/Volunteer-Openings-API).  (Hey look, they also use github!)
 
