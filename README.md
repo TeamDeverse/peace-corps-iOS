@@ -1,6 +1,16 @@
 # peace-corps-iOS
 The Android Peace Corps volunteer openings app 
 
+# Using their API
+The API for getting job listings is open soruce and [available here with instructions](https://github.com/PeaceCorps/Volunteer-Openings-API).  (Hey look, they also use github!)
+
+You can do a simple test to try out the API by running this in a terminal or command line interface that has the command curl:
+```bash
+curl http://www.peacecorps.gov/api/v1/openings/?keyword=teacher
+```
+
+You can also just directly paste queries into your browser to see results. Essentially, the app will parse the string of text returned. It is encoded in a JSON structure for which there are libraries to more convinient read and restructure.
+
 # Getting started
 If you are new to using git, go through the following short online tutorial. Using github for keeping up to date code is critical for wokring on team projects, *especially* with short timelines!
 
