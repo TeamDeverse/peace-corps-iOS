@@ -1,5 +1,5 @@
 # peace-corps-iOS
-The Android Peace Corps volunteer openings app 
+The iOS Peace Corps volunteer openings app 
 
 Our change!
 
