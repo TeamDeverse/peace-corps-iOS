@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		96F3DFD11ADDB0DE009F30AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F3DFD01ADDB0DE009F30AA /* AppDelegate.swift */; };
+		96F3DFD31ADDB0DE009F30AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F3DFD21ADDB0DE009F30AA /* ViewController.swift */; };
+		96F3DFD61ADDB0DE009F30AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96F3DFD41ADDB0DE009F30AA /* Main.storyboard */; };
+		96F3DFD81ADDB0DE009F30AA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96F3DFD71ADDB0DE009F30AA /* Images.xcassets */; };
+		96F3DFDB1ADDB0DE009F30AA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96F3DFD91ADDB0DE009F30AA /* LaunchScreen.xib */; };
+		96F3DFE71ADDB0DE009F30AA /* PeaceCorps_OpeningsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F3DFE61ADDB0DE009F30AA /* PeaceCorps_OpeningsTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		96F3DFE11ADDB0DE009F30AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96F3DFC31ADDB0DE009F30AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96F3DFCA1ADDB0DE009F30AA;
+			remoteInfo = "PeaceCorps Openings";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		96F3DFCB1ADDB0DE009F30AA /* PeaceCorps Openings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PeaceCorps Openings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96F3DFCF1ADDB0DE009F30AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96F3DFD01ADDB0DE009F30AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		96F3DFD21ADDB0DE009F30AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		96F3DFD51ADDB0DE009F30AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		96F3DFD71ADDB0DE009F30AA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		96F3DFDA1ADDB0DE009F30AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		96F3DFE01ADDB0DE009F30AA /* PeaceCorps OpeningsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PeaceCorps OpeningsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96F3DFE51ADDB0DE009F30AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96F3DFE61ADDB0DE009F30AA /* PeaceCorps_OpeningsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeaceCorps_OpeningsTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		96F3DFC81ADDB0DE009F30AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96F3DFDD1ADDB0DE009F30AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		96F3DFC21ADDB0DE009F30AA = {
+			isa = PBXGroup;
+			children = (
+				96F3DFCD1ADDB0DE009F30AA /* PeaceCorps Openings */,
+				96F3DFE31ADDB0DE009F30AA /* PeaceCorps OpeningsTests */,
+				96F3DFCC1ADDB0DE009F30AA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		96F3DFCC1ADDB0DE009F30AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96F3DFCB1ADDB0DE009F30AA /* PeaceCorps Openings.app */,
+				96F3DFE01ADDB0DE009F30AA /* PeaceCorps OpeningsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		96F3DFCD1ADDB0DE009F30AA /* PeaceCorps Openings */ = {
+			isa = PBXGroup;
+			children = (
+				96F3DFD01ADDB0DE009F30AA /* AppDelegate.swift */,
+				96F3DFD21ADDB0DE009F30AA /* ViewController.swift */,
+				96F3DFD41ADDB0DE009F30AA /* Main.storyboard */,
+				96F3DFD71ADDB0DE009F30AA /* Images.xcassets */,
+				96F3DFD91ADDB0DE009F30AA /* LaunchScreen.xib */,
+				96F3DFCE1ADDB0DE009F30AA /* Supporting Files */,
+			);
+			path = "PeaceCorps Openings";
+			sourceTree = "<group>";
+		};
+		96F3DFCE1ADDB0DE009F30AA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				96F3DFCF1ADDB0DE009F30AA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		96F3DFE31ADDB0DE009F30AA /* PeaceCorps OpeningsTests */ = {
+			isa = PBXGroup;
+			children = (
+				96F3DFE61ADDB0DE009F30AA /* PeaceCorps_OpeningsTests.swift */,
+				96F3DFE41ADDB0DE009F30AA /* Supporting Files */,
+			);
+			path = "PeaceCorps OpeningsTests";
+			sourceTree = "<group>";
+		};
+		96F3DFE41ADDB0DE009F30AA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				96F3DFE51ADDB0DE009F30AA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		96F3DFCA1ADDB0DE009F30AA /* PeaceCorps Openings */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96F3DFEA1ADDB0DE009F30AA /* Build configuration list for PBXNativeTarget "PeaceCorps Openings" */;
+			buildPhases = (
+				96F3DFC71ADDB0DE009F30AA /* Sources */,
+				96F3DFC81ADDB0DE009F30AA /* Frameworks */,
+				96F3DFC91ADDB0DE009F30AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PeaceCorps Openings";
+			productName = "PeaceCorps Openings";
+			productReference = 96F3DFCB1ADDB0DE009F30AA /* PeaceCorps Openings.app */;
+			productType = "com.apple.product-type.application";
+		};
+		96F3DFDF1ADDB0DE009F30AA /* PeaceCorps OpeningsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96F3DFED1ADDB0DE009F30AA /* Build configuration list for PBXNativeTarget "PeaceCorps OpeningsTests" */;
+			buildPhases = (
+				96F3DFDC1ADDB0DE009F30AA /* Sources */,
+				96F3DFDD1ADDB0DE009F30AA /* Frameworks */,
+				96F3DFDE1ADDB0DE009F30AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96F3DFE21ADDB0DE009F30AA /* PBXTargetDependency */,
+			);
+			name = "PeaceCorps OpeningsTests";
+			productName = "PeaceCorps OpeningsTests";
+			productReference = 96F3DFE01ADDB0DE009F30AA /* PeaceCorps OpeningsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		96F3DFC31ADDB0DE009F30AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = GAI;
+				TargetAttributes = {
+					96F3DFCA1ADDB0DE009F30AA = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					96F3DFDF1ADDB0DE009F30AA = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 96F3DFCA1ADDB0DE009F30AA;
+					};
+				};
+			};
+			buildConfigurationList = 96F3DFC61ADDB0DE009F30AA /* Build configuration list for PBXProject "PeaceCorps Openings" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 96F3DFC21ADDB0DE009F30AA;
+			productRefGroup = 96F3DFCC1ADDB0DE009F30AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				96F3DFCA1ADDB0DE009F30AA /* PeaceCorps Openings */,
+				96F3DFDF1ADDB0DE009F30AA /* PeaceCorps OpeningsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		96F3DFC91ADDB0DE009F30AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96F3DFD61ADDB0DE009F30AA /* Main.storyboard in Resources */,
+				96F3DFDB1ADDB0DE009F30AA /* LaunchScreen.xib in Resources */,
+				96F3DFD81ADDB0DE009F30AA /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96F3DFDE1ADDB0DE009F30AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96F3DFC71ADDB0DE009F30AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96F3DFD31ADDB0DE009F30AA /* ViewController.swift in Sources */,
+				96F3DFD11ADDB0DE009F30AA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96F3DFDC1ADDB0DE009F30AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96F3DFE71ADDB0DE009F30AA /* PeaceCorps_OpeningsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		96F3DFE21ADDB0DE009F30AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96F3DFCA1ADDB0DE009F30AA /* PeaceCorps Openings */;
+			targetProxy = 96F3DFE11ADDB0DE009F30AA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		96F3DFD41ADDB0DE009F30AA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96F3DFD51ADDB0DE009F30AA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		96F3DFD91ADDB0DE009F30AA /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96F3DFDA1ADDB0DE009F30AA /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		96F3DFE81ADDB0DE009F30AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		96F3DFE91ADDB0DE009F30AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		96F3DFEB1ADDB0DE009F30AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "PeaceCorps Openings/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		96F3DFEC1ADDB0DE009F30AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "PeaceCorps Openings/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		96F3DFEE1ADDB0DE009F30AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "PeaceCorps OpeningsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeaceCorps Openings.app/PeaceCorps Openings";
+			};
+			name = Debug;
+		};
+		96F3DFEF1ADDB0DE009F30AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "PeaceCorps OpeningsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeaceCorps Openings.app/PeaceCorps Openings";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		96F3DFC61ADDB0DE009F30AA /* Build configuration list for PBXProject "PeaceCorps Openings" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96F3DFE81ADDB0DE009F30AA /* Debug */,
+				96F3DFE91ADDB0DE009F30AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96F3DFEA1ADDB0DE009F30AA /* Build configuration list for PBXNativeTarget "PeaceCorps Openings" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96F3DFEB1ADDB0DE009F30AA /* Debug */,
+				96F3DFEC1ADDB0DE009F30AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		96F3DFED1ADDB0DE009F30AA /* Build configuration list for PBXNativeTarget "PeaceCorps OpeningsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96F3DFEE1ADDB0DE009F30AA /* Debug */,
+				96F3DFEF1ADDB0DE009F30AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 96F3DFC31ADDB0DE009F30AA /* Project object */;
+}
