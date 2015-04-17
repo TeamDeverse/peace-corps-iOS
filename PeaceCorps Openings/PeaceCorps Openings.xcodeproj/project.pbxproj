@@ -407,6 +407,7 @@
 				96F3DFEC1ADDB0DE009F30AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96F3DFED1ADDB0DE009F30AA /* Build configuration list for PBXNativeTarget "PeaceCorps OpeningsTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +416,7 @@
 				96F3DFEF1ADDB0DE009F30AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
