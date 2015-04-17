@@ -12,27 +12,27 @@ class ViewController: UIViewController {
     lazy var data = NSMutableData()
     
     struct Job{
-        let title	: String
-        let req_id	: String
-        let country	: String
-        let region	: String
-        let sector	: String
-        let appy_date	: String
-        let know_by	: String
-        let staging_start_date	: String
-        let featured	: Boolean
-        let project_description	: String
-        let required_skills	: String
-        let desired_skills	: String
-        let language_skills	: String
-        let language_skills_comments	: String
-        let volunteers_requested	: Int
-        let accepts_couples	: Boolean
-        let living_conditions_comments	: String
-        let country_medical_considerations	: String
-        let country_site_url	: String
-        let country_flag_image	: String
-        let opening_url	: String
+        let title   : String
+        let req_id  : String
+        let country : String
+        let region  : String
+        let sector  : String
+        let appy_date   : String
+        let know_by : String
+        let staging_start_date  : String
+        let featured    : Boolean
+        let project_description : String
+        let required_skills : String
+        let desired_skills  : String
+        let language_skills : String
+        let language_skills_comments    : String
+        let volunteers_requested    : Int
+        let accepts_couples : Boolean
+        let living_conditions_comments  : String
+        let country_medical_considerations  : String
+        let country_site_url    : String
+        let country_flag_image  : String
+        let opening_url : String
     }
 
     override func viewDidLoad() {
@@ -95,9 +95,5 @@ class ViewController: UIViewController {
                 }
             }
         }
-        
     }
-    
-    
 }
-
