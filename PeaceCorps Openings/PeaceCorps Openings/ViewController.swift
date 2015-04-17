@@ -83,9 +83,7 @@ class ViewController: UIViewController {
     
     func filter(userInput: String, jsonResults: NSDictionary){
         let dataArray = jsonResults["results"] as NSArray;
-        
         println("Data items count: \(dataArray.count)")
-        
         for item in dataArray { // loop through data items
             let obj = item as NSDictionary
             for (key, value) in obj {
