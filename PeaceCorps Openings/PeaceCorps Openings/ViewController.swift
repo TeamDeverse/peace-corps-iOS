@@ -64,17 +64,38 @@ class ViewController: UIViewController {
         var err: NSError
         // throwing an error on the line below (can't figure out where the error message is)
         var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
-        let dataArray = jsonResult["results"] as NSArray;
+    }
+
+    func iterate(jsonResults: NSDictionary){
+        let dataArray = jsonResults["results"] as NSArray;
         
         println("Data items count: \(dataArray.count)")
         
         for item in dataArray { // loop through data items
             let obj = item as NSDictionary
             for (key, value) in obj {
-                    println("Property: \(key as String)")
-                    println("Value: \"\(value)\"")
+                println("Property: \(key as String)")
+                println("Value: \"\(value)\"")
             }
         }
+
+    }
+    
+    func filter(userInput: String, jsonResults: NSDictionary){
+        let dataArray = jsonResults["results"] as NSArray;
+        
+        println("Data items count: \(dataArray.count)")
+        
+        for item in dataArray { // loop through data items
+            let obj = item as NSDictionary
+            for (key, value) in obj {
+                if(key as NSString == userInput){
+                    println("Property: \(key as String)")
+                    println("Value: \"\(value)\"")
+                }
+            }
+        }
+        
     }
     
     
