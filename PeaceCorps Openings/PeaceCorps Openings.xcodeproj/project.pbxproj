@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< HEAD
 		966123BD1AE86CC600028242 /* IMG_0364.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 966123BC1AE86CC600028242 /* IMG_0364.jpg */; };
 		966123C01AE86D0B00028242 /* IMG_0231.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 966123BE1AE86D0B00028242 /* IMG_0231.JPG */; };
 		966123C11AE86D0B00028242 /* IMG_0235.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 966123BF1AE86D0B00028242 /* IMG_0235.jpg */; };
@@ -27,6 +28,9 @@
 		966123E21AE87AED00028242 /* regionanywhere.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 966123D11AE87AED00028242 /* regionanywhere.jpg */; };
 		966123E31AE87AED00028242 /* regionafrica.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 966123D21AE87AED00028242 /* regionafrica.jpg */; };
 		966123E41AE87AED00028242 /* splashscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 966123D31AE87AED00028242 /* splashscreen.png */; };
+=======
+		30992EAC1AE8690A00701DBE /* JobList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30992EAB1AE8690A00701DBE /* JobList.swift */; };
+>>>>>>> 8009f9a1bfc85129f01985f01fc1789b0652d1f9
 		96F3DFD11ADDB0DE009F30AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F3DFD01ADDB0DE009F30AA /* AppDelegate.swift */; };
 		96F3DFD31ADDB0DE009F30AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F3DFD21ADDB0DE009F30AA /* ViewController.swift */; };
 		96F3DFD61ADDB0DE009F30AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96F3DFD41ADDB0DE009F30AA /* Main.storyboard */; };
@@ -46,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+<<<<<<< HEAD
 		966123BC1AE86CC600028242 /* IMG_0364.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = IMG_0364.jpg; path = "../../../../../Pictures/iPhoto Library_2.photolibrary/Previews/2014/11/23/20141123-030253/zAfsyGrkTZmIOHa+tzuPqQ/IMG_0364.jpg"; sourceTree = "<group>"; };
 		966123BE1AE86D0B00028242 /* IMG_0231.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = IMG_0231.JPG; path = "../../../../../Pictures/iPhoto Library_2.photolibrary/Masters/2014/11/23/20141123-030253/IMG_0231.JPG"; sourceTree = "<group>"; };
 		966123BF1AE86D0B00028242 /* IMG_0235.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = IMG_0235.jpg; path = "../../../../../Pictures/iPhoto Library_2.photolibrary/Previews/2014/11/23/20141123-030253/0kVWKfynQDSeSovLkdYb+g/IMG_0235.jpg"; sourceTree = "<group>"; };
@@ -66,6 +71,9 @@
 		966123D11AE87AED00028242 /* regionanywhere.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = regionanywhere.jpg; path = "../../../GAI Images/regionanywhere.jpg"; sourceTree = "<group>"; };
 		966123D21AE87AED00028242 /* regionafrica.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = regionafrica.jpg; path = "../../../GAI Images/regionafrica.jpg"; sourceTree = "<group>"; };
 		966123D31AE87AED00028242 /* splashscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splashscreen.png; path = "../../../GAI Images/splashscreen.png"; sourceTree = "<group>"; };
+=======
+		30992EAB1AE8690A00701DBE /* JobList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobList.swift; sourceTree = "<group>"; };
+>>>>>>> 8009f9a1bfc85129f01985f01fc1789b0652d1f9
 		96D4A0761ADF3D19004B5457 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		96F3DFCB1ADDB0DE009F30AA /* PeaceCorps Openings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PeaceCorps Openings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F3DFCF1ADDB0DE009F30AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -161,6 +169,7 @@
 			children = (
 				96F3DFD01ADDB0DE009F30AA /* AppDelegate.swift */,
 				96F3DFD21ADDB0DE009F30AA /* ViewController.swift */,
+				30992EAB1AE8690A00701DBE /* JobList.swift */,
 				96D4A0761ADF3D19004B5457 /* MyPlayground.playground */,
 				96F3DFD41ADDB0DE009F30AA /* Main.storyboard */,
 				96F3DFD71ADDB0DE009F30AA /* Images.xcassets */,
@@ -319,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96F3DFD31ADDB0DE009F30AA /* ViewController.swift in Sources */,
+				30992EAC1AE8690A00701DBE /* JobList.swift in Sources */,
 				96F3DFD11ADDB0DE009F30AA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

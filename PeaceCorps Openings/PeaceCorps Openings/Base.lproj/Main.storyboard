@@ -285,9 +285,6 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M12-aB-mwm">
                                 <rect key="frame" x="0.0" y="101" width="920" height="123"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="regionanywhere.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="PxY-fP-y6T">
-                                        <rect key="frame" x="8" y="12" width="92" height="100"/>
-                                    </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="regionafrica.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="s5m-lF-nZX">
                                         <rect key="frame" x="108" y="12" width="92" height="100"/>
                                     </imageView>
@@ -311,6 +308,9 @@
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="regionsouthamerica.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="6BY-pF-6wz">
                                         <rect key="frame" x="808" y="12" width="92" height="100"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="regionanywhere.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="PxY-fP-y6T">
+                                        <rect key="frame" x="8" y="12" width="92" height="100"/>
                                     </imageView>
                                 </subviews>
                             </scrollView>
