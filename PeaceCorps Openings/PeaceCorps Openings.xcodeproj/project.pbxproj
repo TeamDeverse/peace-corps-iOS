@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		962175F11AEAC2200062471E /* JobList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962175F01AEAC2200062471E /* JobList.swift */; };
 		966123BD1AE86CC600028242 /* IMG_0364.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 966123BC1AE86CC600028242 /* IMG_0364.jpg */; };
 		966123C01AE86D0B00028242 /* IMG_0231.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 966123BE1AE86D0B00028242 /* IMG_0231.JPG */; };
 		966123C11AE86D0B00028242 /* IMG_0235.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 966123BF1AE86D0B00028242 /* IMG_0235.jpg */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		962175F01AEAC2200062471E /* JobList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobList.swift; sourceTree = "<group>"; };
 		966123BC1AE86CC600028242 /* IMG_0364.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = IMG_0364.jpg; path = "../../../../../Pictures/iPhoto Library_2.photolibrary/Previews/2014/11/23/20141123-030253/zAfsyGrkTZmIOHa+tzuPqQ/IMG_0364.jpg"; sourceTree = "<group>"; };
 		966123BE1AE86D0B00028242 /* IMG_0231.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = IMG_0231.JPG; path = "../../../../../Pictures/iPhoto Library_2.photolibrary/Masters/2014/11/23/20141123-030253/IMG_0231.JPG"; sourceTree = "<group>"; };
 		966123BF1AE86D0B00028242 /* IMG_0235.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = IMG_0235.jpg; path = "../../../../../Pictures/iPhoto Library_2.photolibrary/Previews/2014/11/23/20141123-030253/0kVWKfynQDSeSovLkdYb+g/IMG_0235.jpg"; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 		96F3DFCD1ADDB0DE009F30AA /* PeaceCorps Openings */ = {
 			isa = PBXGroup;
 			children = (
+				962175F01AEAC2200062471E /* JobList.swift */,
 				96F3DFD01ADDB0DE009F30AA /* AppDelegate.swift */,
 				96F3DFD21ADDB0DE009F30AA /* ViewController.swift */,
 				96D4A0761ADF3D19004B5457 /* MyPlayground.playground */,
@@ -319,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96F3DFD31ADDB0DE009F30AA /* ViewController.swift in Sources */,
+				962175F11AEAC2200062471E /* JobList.swift in Sources */,
 				96F3DFD11ADDB0DE009F30AA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

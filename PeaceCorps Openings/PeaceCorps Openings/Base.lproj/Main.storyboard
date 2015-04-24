@@ -3,6 +3,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--PeaceCorp-->
@@ -20,8 +21,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_0235.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="RSs-8B-8y0">
                                 <rect key="frame" x="0.0" y="400" width="320" height="168"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="RSs-8B-8y0" secondAttribute="height" multiplier="40:21" id="gdg-D1-zN3"/>
-                                    <constraint firstAttribute="height" constant="168" id="k7z-am-GJc"/>
+                                    <constraint firstAttribute="width" secondItem="RSs-8B-8y0" secondAttribute="height" multiplier="40:21" id="uUi-ad-kV7"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lL-oV-GbT">
@@ -33,14 +33,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_0364.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Ov1-fV-3ip">
                                 <rect key="frame" x="0.0" y="64" width="320" height="168"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Ov1-fV-3ip" secondAttribute="height" multiplier="40:21" id="agD-wB-XcL"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_0231.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="c7v-PF-VVs">
-                                <rect key="frame" x="0.0" y="232" width="320" height="168"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="168" id="afi-KF-GD7"/>
-                                    <constraint firstAttribute="width" secondItem="c7v-PF-VVs" secondAttribute="height" multiplier="40:21" id="hBr-yJ-hpY"/>
+                                    <constraint firstAttribute="width" secondItem="Ov1-fV-3ip" secondAttribute="height" multiplier="40:21" id="YaY-cu-d3O"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="st0-em-iBZ">
@@ -70,20 +63,27 @@
                                     <segue destination="q1d-f6-7Sk" kind="show" id="g6i-Y0-S5x"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_0231.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="c7v-PF-VVs">
+                                <rect key="frame" x="0.0" y="232" width="320" height="168"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="c7v-PF-VVs" secondAttribute="height" multiplier="40:21" id="k0h-DD-eJI"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="c7v-PF-VVs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7li-iJ-PCo"/>
-                            <constraint firstItem="c7v-PF-VVs" firstAttribute="trailing" secondItem="RSs-8B-8y0" secondAttribute="trailing" id="9pX-Jt-A8d"/>
-                            <constraint firstItem="c7v-PF-VVs" firstAttribute="trailing" secondItem="Ov1-fV-3ip" secondAttribute="trailing" id="EUq-Cz-cKi"/>
-                            <constraint firstItem="c7v-PF-VVs" firstAttribute="top" secondItem="Ov1-fV-3ip" secondAttribute="bottom" id="NHV-h5-DUE"/>
-                            <constraint firstItem="c7v-PF-VVs" firstAttribute="leading" secondItem="Ov1-fV-3ip" secondAttribute="leading" id="PHx-ig-qES"/>
-                            <constraint firstAttribute="trailing" secondItem="c7v-PF-VVs" secondAttribute="trailing" id="RFT-dD-mFJ"/>
-                            <constraint firstItem="c7v-PF-VVs" firstAttribute="width" secondItem="RSs-8B-8y0" secondAttribute="height" multiplier="40:21" id="he7-4g-izo"/>
-                            <constraint firstItem="c7v-PF-VVs" firstAttribute="leading" secondItem="RSs-8B-8y0" secondAttribute="leading" id="hwD-cA-o47"/>
-                            <constraint firstItem="Ov1-fV-3ip" firstAttribute="width" secondItem="c7v-PF-VVs" secondAttribute="height" multiplier="40:21" id="j7a-Aa-9F5"/>
-                            <constraint firstItem="c7v-PF-VVs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="232" id="qgc-0u-txI"/>
-                            <constraint firstItem="RSs-8B-8y0" firstAttribute="top" secondItem="c7v-PF-VVs" secondAttribute="bottom" id="swk-P9-pKL"/>
+                            <constraint firstItem="c7v-PF-VVs" firstAttribute="top" secondItem="Ov1-fV-3ip" secondAttribute="bottom" id="57d-ot-qgP"/>
+                            <constraint firstItem="Ov1-fV-3ip" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="B2G-n0-nKh"/>
+                            <constraint firstItem="RSs-8B-8y0" firstAttribute="top" secondItem="c7v-PF-VVs" secondAttribute="bottom" id="GLu-0U-uiv"/>
+                            <constraint firstItem="RSs-8B-8y0" firstAttribute="top" secondItem="c7v-PF-VVs" secondAttribute="bottom" id="KXU-cr-ml4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RSs-8B-8y0" secondAttribute="trailing" constant="-16" id="b1f-dM-27c"/>
+                            <constraint firstItem="c7v-PF-VVs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="dyM-u8-Ar1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="RSs-8B-8y0" secondAttribute="bottom" id="epA-UI-TI2"/>
+                            <constraint firstItem="Ov1-fV-3ip" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="jZl-bl-H0D"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ov1-fV-3ip" secondAttribute="trailing" constant="-16" id="kpb-QD-px7"/>
+                            <constraint firstItem="RSs-8B-8y0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="mD2-fJ-aVV"/>
+                            <constraint firstItem="c7v-PF-VVs" firstAttribute="top" secondItem="Ov1-fV-3ip" secondAttribute="bottom" id="x1V-Ke-B28"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="c7v-PF-VVs" secondAttribute="trailing" constant="-16" id="xVa-tR-x0q"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="PeaceCorp" id="C6Y-F5-AYC"/>
@@ -241,7 +241,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k1n-4o-dOI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1580" y="677"/>
+            <point key="canvasLocation" x="1596" y="772"/>
         </scene>
         <!--Volunteer Openings-->
         <scene sceneID="fM3-yv-DA6">
