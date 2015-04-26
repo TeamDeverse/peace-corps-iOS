@@ -106,11 +106,16 @@ class JobList{
     //make better to string
     func toString(){
         var myNode = headNode;
-        var i = 1
-        while (i < count){
-            println(myNode.value?.country)
-            i++
-            myNode = myNode.next!
+        var i = 0
+        while (myNode.next != nil){
+            if let myOtherNode = myNode.value{
+                println("\(i). \(myOtherNode.country) \(myOtherNode.region)")
+                i++
+                myNode = myNode.next!
+            }
+        }
+        if let myOtherNode = myNode.value{
+            println("\(i). \(myOtherNode.country) \(myOtherNode.region)")
         }
 }
 //    init(headNode: Node<Job>, lastNode: Node<Job>){
