@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		148313F21B028F2100F06E36 /* diwali.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 148313DE1B028F2100F06E36 /* diwali.jpg */; };
+		148313F31B028F2100F06E36 /* Orange.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 148313DF1B028F2100F06E36 /* Orange.JPG */; };
+		148313F41B028F2100F06E36 /* regionafrica.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 148313E01B028F2100F06E36 /* regionafrica.jpg */; };
+		148313F51B028F2100F06E36 /* regionanywhere.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 148313E11B028F2100F06E36 /* regionanywhere.jpg */; };
+		148313F61B028F2100F06E36 /* regionasia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 148313E21B028F2100F06E36 /* regionasia.jpg */; };
+		148313F71B028F2100F06E36 /* regioncaribbean.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 148313E31B028F2100F06E36 /* regioncaribbean.jpg */; };
+		148313F81B028F2100F06E36 /* regioncentralamericamexico.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 148313E41B028F2100F06E36 /* regioncentralamericamexico.jpg */; };
+		148313F91B028F2100F06E36 /* regioneasterneuropecentralasia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 148313E51B028F2100F06E36 /* regioneasterneuropecentralasia.jpg */; };
+		148313FA1B028F2100F06E36 /* regionnorthafricamiddle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 148313E61B028F2100F06E36 /* regionnorthafricamiddle.jpg */; };
+		148313FB1B028F2100F06E36 /* regionpacificislands.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 148313E71B028F2100F06E36 /* regionpacificislands.jpg */; };
+		148313FC1B028F2100F06E36 /* regionsouthamerica.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 148313E81B028F2100F06E36 /* regionsouthamerica.jpg */; };
+		148313FD1B028F2100F06E36 /* sectoragriculture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 148313E91B028F2100F06E36 /* sectoragriculture.jpg */; };
+		148313FE1B028F2100F06E36 /* sectoranything.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 148313EA1B028F2100F06E36 /* sectoranything.jpg */; };
+		148313FF1B028F2100F06E36 /* sectorcommunity.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 148313EB1B028F2100F06E36 /* sectorcommunity.jpg */; };
+		148314001B028F2100F06E36 /* sectoreducation.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 148313EC1B028F2100F06E36 /* sectoreducation.jpg */; };
+		148314011B028F2100F06E36 /* sectorenvironment.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 148313ED1B028F2100F06E36 /* sectorenvironment.jpg */; };
+		148314021B028F2100F06E36 /* sectorhealth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 148313EE1B028F2100F06E36 /* sectorhealth.jpg */; };
+		148314031B028F2100F06E36 /* sectoryouth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 148313EF1B028F2100F06E36 /* sectoryouth.jpg */; };
+		148314041B028F2100F06E36 /* splashscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 148313F01B028F2100F06E36 /* splashscreen.png */; };
+		148314051B028F2100F06E36 /* third.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 148313F11B028F2100F06E36 /* third.jpg */; };
 		962175F11AEAC2200062471E /* JobList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962175F01AEAC2200062471E /* JobList.swift */; };
 		968C05681AF08CA90096141F /* SelectCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968C05671AF08CA90096141F /* SelectCategoryView.swift */; };
 		968C056A1AF08FA80096141F /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968C05691AF08FA80096141F /* Singleton.swift */; };
@@ -30,6 +50,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		148313DE1B028F2100F06E36 /* diwali.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = diwali.jpg; path = ../imgs/diwali.jpg; sourceTree = "<group>"; };
+		148313DF1B028F2100F06E36 /* Orange.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Orange.JPG; path = ../imgs/Orange.JPG; sourceTree = "<group>"; };
+		148313E01B028F2100F06E36 /* regionafrica.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = regionafrica.jpg; path = ../imgs/regionafrica.jpg; sourceTree = "<group>"; };
+		148313E11B028F2100F06E36 /* regionanywhere.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = regionanywhere.jpg; path = ../imgs/regionanywhere.jpg; sourceTree = "<group>"; };
+		148313E21B028F2100F06E36 /* regionasia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = regionasia.jpg; path = ../imgs/regionasia.jpg; sourceTree = "<group>"; };
+		148313E31B028F2100F06E36 /* regioncaribbean.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = regioncaribbean.jpg; path = ../imgs/regioncaribbean.jpg; sourceTree = "<group>"; };
+		148313E41B028F2100F06E36 /* regioncentralamericamexico.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = regioncentralamericamexico.jpg; path = ../imgs/regioncentralamericamexico.jpg; sourceTree = "<group>"; };
+		148313E51B028F2100F06E36 /* regioneasterneuropecentralasia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = regioneasterneuropecentralasia.jpg; path = ../imgs/regioneasterneuropecentralasia.jpg; sourceTree = "<group>"; };
+		148313E61B028F2100F06E36 /* regionnorthafricamiddle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = regionnorthafricamiddle.jpg; path = ../imgs/regionnorthafricamiddle.jpg; sourceTree = "<group>"; };
+		148313E71B028F2100F06E36 /* regionpacificislands.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = regionpacificislands.jpg; path = ../imgs/regionpacificislands.jpg; sourceTree = "<group>"; };
+		148313E81B028F2100F06E36 /* regionsouthamerica.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = regionsouthamerica.jpg; path = ../imgs/regionsouthamerica.jpg; sourceTree = "<group>"; };
+		148313E91B028F2100F06E36 /* sectoragriculture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sectoragriculture.jpg; path = ../imgs/sectoragriculture.jpg; sourceTree = "<group>"; };
+		148313EA1B028F2100F06E36 /* sectoranything.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sectoranything.jpg; path = ../imgs/sectoranything.jpg; sourceTree = "<group>"; };
+		148313EB1B028F2100F06E36 /* sectorcommunity.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sectorcommunity.jpg; path = ../imgs/sectorcommunity.jpg; sourceTree = "<group>"; };
+		148313EC1B028F2100F06E36 /* sectoreducation.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sectoreducation.jpg; path = ../imgs/sectoreducation.jpg; sourceTree = "<group>"; };
+		148313ED1B028F2100F06E36 /* sectorenvironment.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sectorenvironment.jpg; path = ../imgs/sectorenvironment.jpg; sourceTree = "<group>"; };
+		148313EE1B028F2100F06E36 /* sectorhealth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sectorhealth.jpg; path = ../imgs/sectorhealth.jpg; sourceTree = "<group>"; };
+		148313EF1B028F2100F06E36 /* sectoryouth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sectoryouth.jpg; path = ../imgs/sectoryouth.jpg; sourceTree = "<group>"; };
+		148313F01B028F2100F06E36 /* splashscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splashscreen.png; path = ../imgs/splashscreen.png; sourceTree = "<group>"; };
+		148313F11B028F2100F06E36 /* third.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = third.jpg; path = ../imgs/third.jpg; sourceTree = "<group>"; };
 		962175F01AEAC2200062471E /* JobList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobList.swift; sourceTree = "<group>"; };
 		968C05671AF08CA90096141F /* SelectCategoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCategoryView.swift; sourceTree = "<group>"; };
 		968C05691AF08FA80096141F /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
@@ -65,6 +105,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		148314061B028F2800F06E36 /* imgs */ = {
+			isa = PBXGroup;
+			children = (
+				148313DE1B028F2100F06E36 /* diwali.jpg */,
+				148313DF1B028F2100F06E36 /* Orange.JPG */,
+				148313E01B028F2100F06E36 /* regionafrica.jpg */,
+				148313E11B028F2100F06E36 /* regionanywhere.jpg */,
+				148313E21B028F2100F06E36 /* regionasia.jpg */,
+				148313E31B028F2100F06E36 /* regioncaribbean.jpg */,
+				148313E41B028F2100F06E36 /* regioncentralamericamexico.jpg */,
+				148313E51B028F2100F06E36 /* regioneasterneuropecentralasia.jpg */,
+				148313E61B028F2100F06E36 /* regionnorthafricamiddle.jpg */,
+				148313E71B028F2100F06E36 /* regionpacificislands.jpg */,
+				148313E81B028F2100F06E36 /* regionsouthamerica.jpg */,
+				148313E91B028F2100F06E36 /* sectoragriculture.jpg */,
+				148313EA1B028F2100F06E36 /* sectoranything.jpg */,
+				148313EB1B028F2100F06E36 /* sectorcommunity.jpg */,
+				148313EC1B028F2100F06E36 /* sectoreducation.jpg */,
+				148313ED1B028F2100F06E36 /* sectorenvironment.jpg */,
+				148313EE1B028F2100F06E36 /* sectorhealth.jpg */,
+				148313EF1B028F2100F06E36 /* sectoryouth.jpg */,
+				148313F01B028F2100F06E36 /* splashscreen.png */,
+				148313F11B028F2100F06E36 /* third.jpg */,
+			);
+			name = imgs;
+			sourceTree = "<group>";
+		};
 		96F3DFC21ADDB0DE009F30AA = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +155,7 @@
 			children = (
 				96A79BE21B028E370026879B /* imgs */,
 				962175F01AEAC2200062471E /* JobList.swift */,
+				148314061B028F2800F06E36 /* imgs */,
 				96F3DFD01ADDB0DE009F30AA /* AppDelegate.swift */,
 				96F3DFD21ADDB0DE009F30AA /* ViewController.swift */,
 				968C05691AF08FA80096141F /* Singleton.swift */,
@@ -206,9 +274,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				148313F81B028F2100F06E36 /* regioncentralamericamexico.jpg in Resources */,
+				148314021B028F2100F06E36 /* sectorhealth.jpg in Resources */,
+				148313F51B028F2100F06E36 /* regionanywhere.jpg in Resources */,
 				96A79BE31B028E370026879B /* imgs in Resources */,
 				96F3DFD61ADDB0DE009F30AA /* Main.storyboard in Resources */,
+				148314001B028F2100F06E36 /* sectoreducation.jpg in Resources */,
+				148313F41B028F2100F06E36 /* regionafrica.jpg in Resources */,
+				148313F61B028F2100F06E36 /* regionasia.jpg in Resources */,
+				148313F21B028F2100F06E36 /* diwali.jpg in Resources */,
+				148313F31B028F2100F06E36 /* Orange.JPG in Resources */,
+				148313FE1B028F2100F06E36 /* sectoranything.jpg in Resources */,
+				148314051B028F2100F06E36 /* third.jpg in Resources */,
+				148313FF1B028F2100F06E36 /* sectorcommunity.jpg in Resources */,
+				148313FC1B028F2100F06E36 /* regionsouthamerica.jpg in Resources */,
+				148314031B028F2100F06E36 /* sectoryouth.jpg in Resources */,
+				148313F71B028F2100F06E36 /* regioncaribbean.jpg in Resources */,
+				148314011B028F2100F06E36 /* sectorenvironment.jpg in Resources */,
+				148314041B028F2100F06E36 /* splashscreen.png in Resources */,
 				96F3DFDB1ADDB0DE009F30AA /* LaunchScreen.xib in Resources */,
+				148313FD1B028F2100F06E36 /* sectoragriculture.jpg in Resources */,
+				148313FB1B028F2100F06E36 /* regionpacificislands.jpg in Resources */,
+				148313F91B028F2100F06E36 /* regioneasterneuropecentralasia.jpg in Resources */,
+				148313FA1B028F2100F06E36 /* regionnorthafricamiddle.jpg in Resources */,
 				96F3DFD81ADDB0DE009F30AA /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
