@@ -109,13 +109,13 @@ class JobList{
         var i = 0
         while (myNode.next != nil){
             if let myOtherNode = myNode.value{
-                println("\(i). \(myOtherNode.country) \(myOtherNode.region)")
+                println("\(i). \(myOtherNode.country) \(myOtherNode.region) \(myOtherNode.apply_date)")
                 i++
                 myNode = myNode.next!
             }
         }
         if let myOtherNode = myNode.value{
-            println("\(i). \(myOtherNode.country) \(myOtherNode.region)")
+            println("\(i). \(myOtherNode.country) \(myOtherNode.region) \(myOtherNode.apply_date)")
         }
 }
 //    init(headNode: Node<Job>, lastNode: Node<Job>){
