@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+
 class SelectCategoryView: UIViewController {
     var regionArray = ["anywhere"];
     var sectorArray = ["anything"];

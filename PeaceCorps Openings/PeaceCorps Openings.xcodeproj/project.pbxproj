@@ -31,6 +31,7 @@
 		968C05681AF08CA90096141F /* SelectCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968C05671AF08CA90096141F /* SelectCategoryView.swift */; };
 		968C056A1AF08FA80096141F /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968C05691AF08FA80096141F /* Singleton.swift */; };
 		96A79BE31B028E370026879B /* imgs in Resources */ = {isa = PBXBuildFile; fileRef = 96A79BE21B028E370026879B /* imgs */; };
+		96AC69211B02934D004C3F27 /* ListTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AC69201B02934D004C3F27 /* ListTable.swift */; };
 		96F3DFD11ADDB0DE009F30AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F3DFD01ADDB0DE009F30AA /* AppDelegate.swift */; };
 		96F3DFD31ADDB0DE009F30AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F3DFD21ADDB0DE009F30AA /* ViewController.swift */; };
 		96F3DFD61ADDB0DE009F30AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96F3DFD41ADDB0DE009F30AA /* Main.storyboard */; };
@@ -74,6 +75,7 @@
 		968C05671AF08CA90096141F /* SelectCategoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCategoryView.swift; sourceTree = "<group>"; };
 		968C05691AF08FA80096141F /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		96A79BE21B028E370026879B /* imgs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = imgs; sourceTree = "<group>"; };
+		96AC69201B02934D004C3F27 /* ListTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTable.swift; sourceTree = "<group>"; };
 		96D4A0761ADF3D19004B5457 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		96F3DFCB1ADDB0DE009F30AA /* PeaceCorps Openings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PeaceCorps Openings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F3DFCF1ADDB0DE009F30AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				96D4A0761ADF3D19004B5457 /* MyPlayground.playground */,
 				96F3DFD41ADDB0DE009F30AA /* Main.storyboard */,
 				968C05671AF08CA90096141F /* SelectCategoryView.swift */,
+				96AC69201B02934D004C3F27 /* ListTable.swift */,
 				96F3DFD71ADDB0DE009F30AA /* Images.xcassets */,
 				96F3DFD91ADDB0DE009F30AA /* LaunchScreen.xib */,
 				96F3DFCE1ADDB0DE009F30AA /* Supporting Files */,
@@ -320,6 +323,7 @@
 				962175F11AEAC2200062471E /* JobList.swift in Sources */,
 				968C056A1AF08FA80096141F /* Singleton.swift in Sources */,
 				96F3DFD11ADDB0DE009F30AA /* AppDelegate.swift in Sources */,
+				96AC69211B02934D004C3F27 /* ListTable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

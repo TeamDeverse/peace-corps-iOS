@@ -10,7 +10,8 @@ import Foundation
 
 class Singleton {
     let jobList = JobList()
-
+    var fittingJobs = JobList()
+    
     class func sharedInstance() -> Singleton! {
         struct Static {
             static var instance: Singleton? = nil
@@ -22,6 +23,10 @@ class Singleton {
         }
         
         return Static.instance!
+    }
+    
+    func numOfElements()->Int{
+        return fittingJobs.count
     }
     
     required init() {
@@ -39,7 +44,7 @@ class Singleton {
     }
     
     func filter(regionArray: NSArray, sectorArray: NSArray){
-        var fittingJobs = JobList()
+//        var fittingJobs = JobList()
         var temp = jobList.headNode
         if(jobList.isEmpty()){
             return
