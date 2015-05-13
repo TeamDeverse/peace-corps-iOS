@@ -66,7 +66,10 @@ class SelectCategoryView: UIViewController {
 //        println("Search")
         println(regionArray)
         println(sectorArray)
-        singleton.filter(regionArray, sectorArray: sectorArray)
+        
+        // SEND to the next view, the table
+        // singleton.filter(regionArray, sectorArray: sectorArray) // deleted this
+        // instead, call segue with this info
     }
 
     @IBAction func AnywhereRegion(sender: AnyObject) {

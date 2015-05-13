@@ -27,11 +27,15 @@
 		148314031B028F2100F06E36 /* sectoryouth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 148313EF1B028F2100F06E36 /* sectoryouth.jpg */; };
 		148314041B028F2100F06E36 /* splashscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 148313F01B028F2100F06E36 /* splashscreen.png */; };
 		148314051B028F2100F06E36 /* third.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 148313F11B028F2100F06E36 /* third.jpg */; };
+		14CAE6311B03074100E717E7 /* ListTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CAE6301B03074100E717E7 /* ListTableController.swift */; };
+		14CAE6331B03126300E717E7 /* resultsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CAE6321B03126300E717E7 /* resultsCellView.swift */; };
+		14CAE6351B031D2800E717E7 /* ResultEntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CAE6341B031D2800E717E7 /* ResultEntryController.swift */; };
+		14CAE6381B03282900E717E7 /* star_none.png in Resources */ = {isa = PBXBuildFile; fileRef = 14CAE6361B03282900E717E7 /* star_none.png */; };
+		14CAE6391B03282900E717E7 /* Star-Favorites.png in Resources */ = {isa = PBXBuildFile; fileRef = 14CAE6371B03282900E717E7 /* Star-Favorites.png */; };
 		962175F11AEAC2200062471E /* JobList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962175F01AEAC2200062471E /* JobList.swift */; };
 		968C05681AF08CA90096141F /* SelectCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968C05671AF08CA90096141F /* SelectCategoryView.swift */; };
 		968C056A1AF08FA80096141F /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968C05691AF08FA80096141F /* Singleton.swift */; };
 		96A79BE31B028E370026879B /* imgs in Resources */ = {isa = PBXBuildFile; fileRef = 96A79BE21B028E370026879B /* imgs */; };
-		96AC69211B02934D004C3F27 /* ListTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AC69201B02934D004C3F27 /* ListTable.swift */; };
 		96F3DFD11ADDB0DE009F30AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F3DFD01ADDB0DE009F30AA /* AppDelegate.swift */; };
 		96F3DFD31ADDB0DE009F30AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F3DFD21ADDB0DE009F30AA /* ViewController.swift */; };
 		96F3DFD61ADDB0DE009F30AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96F3DFD41ADDB0DE009F30AA /* Main.storyboard */; };
@@ -71,11 +75,15 @@
 		148313EF1B028F2100F06E36 /* sectoryouth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sectoryouth.jpg; path = ../imgs/sectoryouth.jpg; sourceTree = "<group>"; };
 		148313F01B028F2100F06E36 /* splashscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splashscreen.png; path = ../imgs/splashscreen.png; sourceTree = "<group>"; };
 		148313F11B028F2100F06E36 /* third.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = third.jpg; path = ../imgs/third.jpg; sourceTree = "<group>"; };
+		14CAE6301B03074100E717E7 /* ListTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableController.swift; sourceTree = "<group>"; };
+		14CAE6321B03126300E717E7 /* resultsCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = resultsCellView.swift; sourceTree = "<group>"; };
+		14CAE6341B031D2800E717E7 /* ResultEntryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultEntryController.swift; sourceTree = "<group>"; };
+		14CAE6361B03282900E717E7 /* star_none.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star_none.png; path = imgs/star_none.png; sourceTree = "<group>"; };
+		14CAE6371B03282900E717E7 /* Star-Favorites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Star-Favorites.png"; path = "imgs/Star-Favorites.png"; sourceTree = "<group>"; };
 		962175F01AEAC2200062471E /* JobList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobList.swift; sourceTree = "<group>"; };
 		968C05671AF08CA90096141F /* SelectCategoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCategoryView.swift; sourceTree = "<group>"; };
 		968C05691AF08FA80096141F /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		96A79BE21B028E370026879B /* imgs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = imgs; sourceTree = "<group>"; };
-		96AC69201B02934D004C3F27 /* ListTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTable.swift; sourceTree = "<group>"; };
 		96D4A0761ADF3D19004B5457 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		96F3DFCB1ADDB0DE009F30AA /* PeaceCorps Openings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PeaceCorps Openings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F3DFCF1ADDB0DE009F30AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -111,6 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				148313DE1B028F2100F06E36 /* diwali.jpg */,
+				14CAE6361B03282900E717E7 /* star_none.png */,
+				14CAE6371B03282900E717E7 /* Star-Favorites.png */,
 				148313DF1B028F2100F06E36 /* Orange.JPG */,
 				148313E01B028F2100F06E36 /* regionafrica.jpg */,
 				148313E11B028F2100F06E36 /* regionanywhere.jpg */,
@@ -163,8 +173,10 @@
 				968C05691AF08FA80096141F /* Singleton.swift */,
 				96D4A0761ADF3D19004B5457 /* MyPlayground.playground */,
 				96F3DFD41ADDB0DE009F30AA /* Main.storyboard */,
+				14CAE6301B03074100E717E7 /* ListTableController.swift */,
+				14CAE6341B031D2800E717E7 /* ResultEntryController.swift */,
+				14CAE6321B03126300E717E7 /* resultsCellView.swift */,
 				968C05671AF08CA90096141F /* SelectCategoryView.swift */,
-				96AC69201B02934D004C3F27 /* ListTable.swift */,
 				96F3DFD71ADDB0DE009F30AA /* Images.xcassets */,
 				96F3DFD91ADDB0DE009F30AA /* LaunchScreen.xib */,
 				96F3DFCE1ADDB0DE009F30AA /* Supporting Files */,
@@ -290,6 +302,8 @@
 				148313FE1B028F2100F06E36 /* sectoranything.jpg in Resources */,
 				148314051B028F2100F06E36 /* third.jpg in Resources */,
 				148313FF1B028F2100F06E36 /* sectorcommunity.jpg in Resources */,
+				14CAE6381B03282900E717E7 /* star_none.png in Resources */,
+				14CAE6391B03282900E717E7 /* Star-Favorites.png in Resources */,
 				148313FC1B028F2100F06E36 /* regionsouthamerica.jpg in Resources */,
 				148314031B028F2100F06E36 /* sectoryouth.jpg in Resources */,
 				148313F71B028F2100F06E36 /* regioncaribbean.jpg in Resources */,
@@ -321,9 +335,11 @@
 				968C05681AF08CA90096141F /* SelectCategoryView.swift in Sources */,
 				96F3DFD31ADDB0DE009F30AA /* ViewController.swift in Sources */,
 				962175F11AEAC2200062471E /* JobList.swift in Sources */,
+				14CAE6351B031D2800E717E7 /* ResultEntryController.swift in Sources */,
+				14CAE6311B03074100E717E7 /* ListTableController.swift in Sources */,
 				968C056A1AF08FA80096141F /* Singleton.swift in Sources */,
 				96F3DFD11ADDB0DE009F30AA /* AppDelegate.swift in Sources */,
-				96AC69211B02934D004C3F27 /* ListTable.swift in Sources */,
+				14CAE6331B03126300E717E7 /* resultsCellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,7 +465,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "PeaceCorps Openings/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(SRCROOT/**";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -459,7 +475,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "PeaceCorps Openings/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(SRCROOT/**";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
