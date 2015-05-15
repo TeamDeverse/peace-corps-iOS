@@ -68,8 +68,11 @@ class ListTableController: UITableViewController {
         
         start = 1
         // arrays for checking and setting which image to use
-        let sectormatcharray = ["agriculture","etc"]
-        let sectorimgsarray = ["sectoragriculture.jpg","etc"]
+        let sectormatcharray = ["Agriculture","Community","Education","Environment","Health","Youth","Youth in Development"]
+        let sectorimgsarray = ["sectoragriculture.jpg","sectorcommunity.jpg","sectoreducation.jpg","sectorenvironment.jpg","sectorhealth.jpg","sectoryouth.jpg","sectoryouth.jpg"]
+        
+        // make simialr arrays for the region.. then make background of cell colored and the actual
+        // image be the region
         
         // set the correct sector image icon
         for i in 0...(sectormatcharray.count-1){
