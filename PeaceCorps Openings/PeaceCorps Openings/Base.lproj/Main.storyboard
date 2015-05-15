@@ -423,7 +423,7 @@
                                     <segue destination="7Sc-LX-jBw" kind="show" id="bwc-BS-blW"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M12-aB-mwm">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M12-aB-mwm">
                                 <rect key="frame" x="0.0" y="101" width="320" height="123"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="regioncentralamericamexico.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="hqu-Zh-EPQ">
