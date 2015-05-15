@@ -106,7 +106,12 @@ class ListTableController: UITableViewController {
             destinationVC = segue.destinationViewController as ResultEntryController
             destinationVC.titleString = temp1.value!.title
             destinationVC.sectorLabel = temp1.value!.sector
-            
+            destinationVC.describe = temp1.value!.project_description
+            destinationVC.skills = temp1.value!.required_skills
+            destinationVC.living = temp1.value!.living_conditions_comments
+            destinationVC.all_dates = (temp1.value!.apply_date as String) + "/" + (temp1.value!.know_by as String) + "/" + (temp1.value!.staging_start_date as String)
+            destinationVC.open = String(temp1.value!.volunteers_requested)
+            destinationVC.region = temp1.value!.region
             println(temp1.value!.title)
             println(temp1.value!.sector)
             

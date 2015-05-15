@@ -15,6 +15,12 @@ class ResultEntryController: UIViewController {
     // information form segue gets put here
     var titleString : String!
     var sectorLabel : String!
+    var describe : String!
+    var skills : String!
+    var living : String!
+    var all_dates : String!
+    var region : String!
+    var open: String!
     var favoriteStatus = false
     
     // the labels in the UI
@@ -47,6 +53,10 @@ class ResultEntryController: UIViewController {
         // here, set all the elements accordingly
         entryTitle.text = titleString
         sector.text = sectorLabel
+        descriptionTextView.text = describe
+        dates.text = all_dates
+        countryRegion.text = region
+        openSpots.text = open
     }
     
     override func didReceiveMemoryWarning() {
@@ -73,11 +83,17 @@ class ResultEntryController: UIViewController {
         switch segmentControl.selectedSegmentIndex{
         case 0:
             paragraphTitle.text = "Project Description"
+            descriptionTextView.text = describe
+
             // set the text of the paragraph to be the descirption!
         case 1:
             paragraphTitle.text = "Required Skills"
+            descriptionTextView.text = skills
+
         case 2:
             paragraphTitle.text = "Living Conditions"
+            descriptionTextView.text = living
+
         default:
             break;
         }
