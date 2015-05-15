@@ -10,8 +10,11 @@ import UIKit
 
 class ResultEntryController: UIViewController {
     
+    // STEP 1: create a variable that amtches a field that needs to be displayed
+    
     // information form segue gets put here
     var titleString : String!
+    var sectorLabel : String!
     var favoriteStatus = false
     
     // the labels in the UI
@@ -31,14 +34,19 @@ class ResultEntryController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         entryTitle.text = titleString
+        
         // (note to self: possibly may need to setters above here instead)
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        // STEP 3: using the variables passed in to set the UI views on load
+        println("chekcing sector label")
+        println(sectorLabel)
         // here, set all the elements accordingly
         entryTitle.text = titleString
+        sector.text = sectorLabel
     }
     
     override func didReceiveMemoryWarning() {

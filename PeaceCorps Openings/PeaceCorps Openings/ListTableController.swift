@@ -16,6 +16,7 @@ class ListTableController: UITableViewController {
     var fitting = JobList()
     var temp = Node<Job>()
     var start = 0
+    var tempIndex = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         var region = arrays.region()
@@ -64,7 +65,7 @@ class ListTableController: UITableViewController {
         cell.countryRegionLabel!.text = temp.value?.region
         cell.departByLabel!.text = temp.value?.staging_start_date
         // temporary test variable, should read from the passed in data
-        var sectorname = "agriculture"
+        
         start = 1
         // arrays for checking and setting which image to use
         let sectormatcharray = ["agriculture","etc"]
@@ -73,7 +74,7 @@ class ListTableController: UITableViewController {
         // set the correct sector image icon
         for i in 0...(sectormatcharray.count-1){
             println(i)
-            if sectorname == sectormatcharray[i]{
+            if temp.value?.sector == sectormatcharray[i]{
                 cell.imgView.image = UIImage(named:sectorimgsarray[i])
             }
         }
@@ -86,32 +87,28 @@ class ListTableController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         self.performSegueWithIdentifier("toResult", sender: indexPath);
-//        // all the information to send
-        println(indexPath.row)
-        var temp1 = fitting.headNode
-        for var i = 0; i < (indexPath.row); ++i {
-            temp1 = temp1.next!
-        }
-        var openingTitle = temp1.value?.title // should come from listing, e.g. fitleredJobs[indexPath.row].title
-        println(openingTitle)
+        tempIndex = indexPath.row // set this so we know how many in the linked list to move through
 
-//         setup the segue and so forth
-        let destinationVC = ResultEntryController()
-        destinationVC.titleString = openingTitle
-        destinationVC.performSegueWithIdentifier("toResult", sender: self)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
         if (segue!.identifier == "toResult") {
-            var openingTitle = "The Listing Title" // hard coded right now, grab from incoming data!
-            // add other variables here to pass, all the text
             
-            println("Doing segue, hard coded title set...")
-            println(openingTitle)
+            // skip to the right place in the head
+            var temp1 = fitting.headNode
+            for var i = 0; i < (tempIndex); ++i {
+                temp1 = temp1.next!
+            }
+            
+            // STEP 2: Assign the variable to the value from the node here
             
             var destinationVC:ResultEntryController = ResultEntryController()
             destinationVC = segue.destinationViewController as ResultEntryController
-            destinationVC.titleString = openingTitle
+            destinationVC.titleString = temp1.value!.title
+            destinationVC.sectorLabel = temp1.value!.sector
+            
+            println(temp1.value!.title)
+            println(temp1.value!.sector)
             
         }
     }
