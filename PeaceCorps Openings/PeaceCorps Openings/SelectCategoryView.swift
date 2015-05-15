@@ -8,11 +8,10 @@
 
 import Foundation
 import UIKit
-
+var regionArray = ["anywhere"];
+var sectorArray = ["anything"];
 
 class SelectCategoryView: UIViewController {
-    var regionArray = ["anywhere"];
-    var sectorArray = ["anything"];
     let singleton = Singleton()
     @IBOutlet weak var AnywhereView: UIButton!
     @IBOutlet weak var AfricaView: UIButton!
@@ -21,6 +20,13 @@ class SelectCategoryView: UIViewController {
     @IBOutlet weak var AgricultureS: UIButton!
     @IBOutlet weak var CommunityS: UIButton!
 
+    func region()->[String]{
+        return regionArray
+    }
+    
+    func sector()->[String]{
+        return sectorArray
+    }
     @IBAction func AnythingSector(sender: AnyObject) {
 //        println("anything")
         if(!contains(sectorArray,"anything")){

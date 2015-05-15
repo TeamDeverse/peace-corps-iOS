@@ -28,49 +28,6 @@ struct Job{
     var country_site_url    : String = ""
     var country_flag_image  : String = ""
     var opening_url : String = ""
-    //        init(title   : String,
-    //            req_id  : String,
-    //            country : String,
-    //            region  : String,
-    //            sector  : String,
-    //            apply_date   : String,
-    //            know_by : String,
-    //            staging_start_date  : String,
-    //            featured    : Bool,
-    //            project_description : String,
-    //            required_skills : String,
-    //            desired_skills  : String,
-    //            language_skills : String,
-    //            language_skills_comments    : String,
-    //            volunteers_requested    : Int,
-    //            accepts_couples : Bool,
-    //            living_conditions_comments  : String,
-    //            country_medical_considerations  : String,
-    //            country_site_url    : String,
-    //            country_flag_image  : String,
-    //            opening_url : String){
-    //                self.title = title
-    //                self.req_id = req_id
-    //                self.country = country
-    //                self.region = region
-    //                self.sector = sector
-    //                self.apply_date = apply_date
-    //                self.know_by = know_by
-    //                self.staging_start_date = staging_start_date
-    //                self.featured = featured
-    //                self.project_description = project_description
-    //                self.required_skills = required_skills
-    //                self.desired_skills = desired_skills
-    //                self.language_skills = language_skills
-    //                self.language_skills_comments = language_skills_comments
-    //                self.volunteers_requested = volunteers_requested
-    //                self.accepts_couples = accepts_couples
-    //                self.living_conditions_comments = living_conditions_comments
-    //                self.country_medical_considerations = country_medical_considerations
-    //                self.country_site_url = country_site_url
-    //                self.country_flag_image = country_flag_image
-    //                self.opening_url = opening_url
-    //        }
 }
 class Node<T>{
     var value: T?

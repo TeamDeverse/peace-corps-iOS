@@ -43,15 +43,15 @@ class Singleton {
         return boardsDictionary
     }
     
-    func filter(regionArray: NSArray, sectorArray: NSArray){
+    func filter(regionArray: NSArray, sectorArray: NSArray)->JobList{
 //        var fittingJobs = JobList()
         var temp = jobList.headNode
         if(jobList.isEmpty()){
-            return
+            return jobList
         }
         if (regionArray.containsObject("anywhere") && sectorArray.containsObject("anything")){
             jobList.toString()
-            return
+            return jobList
         }
         else if(regionArray.containsObject("anywhere")){
             while(temp.next != nil){
@@ -62,7 +62,7 @@ class Singleton {
                 temp = temp.next!
             }
             fittingJobs.toString()
-            return
+            return fittingJobs
         }
         else if(sectorArray.containsObject("anything")){
             while(temp.next != nil){
@@ -74,7 +74,7 @@ class Singleton {
             }
 //            println("To String")
             fittingJobs.toString()
-            return
+            return fittingJobs
         }
         else{
             while (temp.next != nil){
@@ -85,7 +85,7 @@ class Singleton {
                 temp = temp.next!
             }
             fittingJobs.toString()
-            return
+            return fittingJobs
         }
     }
 
