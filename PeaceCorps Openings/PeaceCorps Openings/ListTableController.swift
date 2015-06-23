@@ -43,7 +43,7 @@ class ListTableController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
         // set the type of cell based on the storyboard cell prototype and associated class
-        var cell:resultsCellView = tableView.dequeueReusableCellWithIdentifier("ResultsCell", forIndexPath: indexPath) as resultsCellView
+        var cell:resultsCellView = tableView.dequeueReusableCellWithIdentifier("ResultsCell", forIndexPath: indexPath) as! resultsCellView
         if (start == 0){
             temp = fitting.headNode
         }
@@ -106,7 +106,7 @@ class ListTableController: UITableViewController {
             // STEP 2: Assign the variable to the value from the node here
             
             var destinationVC:ResultEntryController = ResultEntryController()
-            destinationVC = segue.destinationViewController as ResultEntryController
+            destinationVC = segue.destinationViewController as! ResultEntryController
             destinationVC.titleString = temp1.value!.title
             destinationVC.sectorLabel = temp1.value!.sector
             destinationVC.describe = temp1.value!.project_description

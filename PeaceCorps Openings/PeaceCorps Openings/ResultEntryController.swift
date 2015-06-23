@@ -39,6 +39,7 @@ class ResultEntryController: UIViewController {
     // built in funcitons
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(red:225/256, green:223/256,blue:198/256,alpha:1.0)
         entryTitle.text = titleString
         
         // (note to self: possibly may need to setters above here instead)
@@ -48,13 +49,14 @@ class ResultEntryController: UIViewController {
         super.viewWillAppear(animated)
         
         // STEP 3: using the variables passed in to set the UI views on load
-        println("chekcing sector label")
-        println(sectorLabel)
+        //println("chekcing sector label")
+        //println(sectorLabel)
         // here, set all the elements accordingly
         entryTitle.text = titleString
         sector.text = sectorLabel
         descriptionTextView.text = describe
         dates.text = all_dates
+        println(all_dates) // shouldn't there be three..?
         countryRegion.text = region
         openSpots.text = open
     }

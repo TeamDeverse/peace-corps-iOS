@@ -38,7 +38,7 @@ class Singleton {
     }
     func parseJSON(inputData: NSData) -> NSDictionary{
         var error: NSError?
-        var boardsDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(inputData, options: NSJSONReadingOptions.MutableContainers, error: &error) as NSDictionary
+        var boardsDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(inputData, options: NSJSONReadingOptions.MutableContainers, error: &error) as! NSDictionary
         
         return boardsDictionary
     }
@@ -96,74 +96,74 @@ class Singleton {
         
         //find a better constraint
         while (i < 3){
-            var dataArray = second["results"] as NSArray
+            var dataArray = second["results"]as! NSArray
             
             for item in dataArray { // loop through data items
-                let obj = item as NSDictionary
+                let obj = item as! NSDictionary
                 var newJob = Job()
                 for (key, value) in obj {
-                    if(key as NSString == "title"){
-                        newJob.title = value as NSString
+                    if(key as! String == "title"){
+                        newJob.title = value as! String
                     }
-                    if(key as NSString == "req_id"){
-                        newJob.req_id = value as NSString
+                    if(key as! String == "req_id"){
+                        newJob.req_id = value as! String
                     }
-                    if(key as NSString == "country"){
-                        newJob.country = value as NSString
+                    if(key as! String == "country"){
+                        newJob.country = value as! String
                     }
-                    if(key as NSString == "region"){
-                        newJob.region = value as NSString
+                    if(key as! String == "region"){
+                        newJob.region = value as! String
                     }
-                    if(key as NSString == "sector"){
-                        newJob.sector = value as NSString
+                    if(key as! String == "sector"){
+                        newJob.sector = value as! String
                     }
-                    if(key as NSString == "apply_date"){
-                        newJob.apply_date = value as NSString
+                    if(key as! String == "apply_date"){
+                        newJob.apply_date = value as! String
                     }
-                    if(key as NSString == "know_by"){
-                        newJob.know_by = value as NSString
+                    if(key as! String == "know_by"){
+                        newJob.know_by = value as! String
                     }
-                    if(key as NSString == "staging_start_date"){
-                        newJob.staging_start_date = value as NSString
+                    if(key as! String == "staging_start_date"){
+                        newJob.staging_start_date = value as! String
                     }
-                    if(key as NSString == "featured"){
-                        newJob.featured = value as Bool
+                    if(key as! String == "featured"){
+                        newJob.featured = value as! Bool
                     }
-                    if(key as NSString == "project_description"){
-                        newJob.project_description = value as NSString
+                    if(key as! String == "project_description"){
+                        newJob.project_description = value as! String
                     }
-                    if(key as NSString == "required_skills"){
-                        newJob.required_skills = value as NSString
+                    if(key as! String == "required_skills"){
+                        newJob.required_skills = value as! String
                     }
-                    if(key as NSString == "desired_skills"){
-                        newJob.desired_skills = value as NSString
+                    if(key as! String == "desired_skills"){
+                        newJob.desired_skills = value as! String
                     }
-                    if(key as NSString == "language_skills"){
-                        newJob.language_skills = value as NSString
+                    if(key as! String == "language_skills"){
+                        newJob.language_skills = value as! String
                     }
-                    if(key as NSString == "language_skills_comments"){
-                        newJob.language_skills_comments = value as NSString
+                    if(key as! String == "language_skills_comments"){
+                        newJob.language_skills_comments = value as! String
                     }
-                    if(key as NSString == "volunteers_requested"){
-                        newJob.volunteers_requested = value as Int
+                    if(key as! String == "volunteers_requested"){
+                        newJob.volunteers_requested = value as! Int
                     }
-                    if(key as NSString == "accepts_couples"){
-                        newJob.accepts_couples = value as Bool
+                    if(key as! String == "accepts_couples"){
+                        newJob.accepts_couples = value as! Bool
                     }
-                    if(key as NSString == "living_conditions_comments"){
-                        newJob.living_conditions_comments = value as NSString
+                    if(key as! NSString == "living_conditions_comments"){
+                        newJob.living_conditions_comments = value as! String
                     }
-                    if(key as NSString == "country_medical_considerations"){
-                        newJob.country_medical_considerations = value as NSString
+                    if(key as! NSString == "country_medical_considerations"){
+                        newJob.country_medical_considerations = value as! String
                     }
-                    if(key as NSString == "country_site_url"){
-                        newJob.country_site_url = value as NSString
+                    if(key as! NSString == "country_site_url"){
+                        newJob.country_site_url = value as! String
                     }
-                    if(key as NSString == "country_flag_image"){
-                        newJob.country_flag_image = value as NSString
+                    if(key as! NSString == "country_flag_image"){
+                        newJob.country_flag_image = value as! String
                     }
-                    if(key as NSString == "opening_url"){
-                        newJob.opening_url = value as NSString
+                    if(key as! NSString == "opening_url"){
+                        newJob.opening_url = value as! String
                     }
                     //println("Property: \(key as String)")
                     //println("Value: \"\(value)\"")
@@ -171,78 +171,78 @@ class Singleton {
                 jobList.insert(newJob)
             }
 //            println(second["next"] as NSString)
-            second = parseJSON(getJSON(second["next"] as NSString))
+            second = parseJSON(getJSON(second["next"] as! String))
             //println((second["next"]?.length())!)
             i++
         }
-        var dataArray = second["results"] as NSArray
+        var dataArray = second["results"] as! NSArray
         
         for item in dataArray { // loop through data items
-            let obj = item as NSDictionary
+            let obj = item as! NSDictionary
             var newJob = Job()
             for (key, value) in obj {
-                if(key as NSString == "title"){
-                    newJob.title = value as NSString
+                if(key as! String == "title"){
+                    newJob.title = value as! String
                 }
-                if(key as NSString == "req_id"){
-                    newJob.req_id = value as NSString
+                if(key as! String == "req_id"){
+                    newJob.req_id = value as! String
                 }
-                if(key as NSString == "country"){
-                    newJob.country = value as NSString
+                if(key as! String == "country"){
+                    newJob.country = value as! String
                 }
-                if(key as NSString == "region"){
-                    newJob.region = value as NSString
+                if(key as! String == "region"){
+                    newJob.region = value as! String
                 }
-                if(key as NSString == "sector"){
-                    newJob.sector = value as NSString
+                if(key as! String == "sector"){
+                    newJob.sector = value as! String
                 }
-                if(key as NSString == "apply_date"){
-                    newJob.apply_date = value as NSString
+                if(key as! String == "apply_date"){
+                    newJob.apply_date = value as! String
                 }
-                if(key as NSString == "know_by"){
-                    newJob.know_by = value as NSString
+                if(key as! String == "know_by"){
+                    newJob.know_by = value as! String
                 }
-                if(key as NSString == "staging_start_date"){
-                    newJob.staging_start_date = value as NSString
+                if(key as! String == "staging_start_date"){
+                    newJob.staging_start_date = value as! String
                 }
-                if(key as NSString == "featured"){
-                    newJob.featured = value as Bool
+                if(key as! String == "featured"){
+                    newJob.featured = value as! Bool
                 }
-                if(key as NSString == "project_description"){
-                    newJob.project_description = value as NSString
+                if(key as! String == "project_description"){
+                    newJob.project_description = value as! String
                 }
-                if(key as NSString == "required_skills"){
-                    newJob.required_skills = value as NSString
+                if(key as! String == "required_skills"){
+                    newJob.required_skills = value as! String
                 }
-                if(key as NSString == "desired_skills"){
-                    newJob.desired_skills = value as NSString
+                if(key as! String == "desired_skills"){
+                    newJob.desired_skills = value as! String
                 }
-                if(key as NSString == "language_skills"){
-                    newJob.language_skills = value as NSString
+                if(key as! String == "language_skills"){
+                    newJob.language_skills = value as! String
                 }
-                if(key as NSString == "language_skills_comments"){
-                    newJob.language_skills_comments = value as NSString
+                if(key as! String == "language_skills_comments"){
+                    newJob.language_skills_comments = value as! String
                 }
-                if(key as NSString == "volunteers_requested"){
-                    newJob.volunteers_requested = value as Int
+                if(key as! String == "volunteers_requested"){
+                    newJob.volunteers_requested = value as! Int
                 }
-                if(key as NSString == "accepts_couples"){
-                    newJob.accepts_couples = value as Bool
+                if(key as! String == "accepts_couples"){
+                    newJob.accepts_couples = value as! Bool
                 }
-                if(key as NSString == "living_conditions_comments"){
-                    newJob.living_conditions_comments = value as NSString
+                if(key as! String == "living_conditions_comments"){
+                    newJob.living_conditions_comments = value as! String
                 }
-                if(key as NSString == "country_medical_considerations"){
-                    newJob.country_medical_considerations = value as NSString
+                if(key as! String == "country_medical_considerations"){
+                    newJob.country_medical_considerations = value as! String
                 }
-                if(key as NSString == "country_site_url"){
-                    newJob.country_site_url = value as NSString
+                if(key as! String == "country_site_url"){
+                    newJob.country_site_url = value as! String
                 }
-                if(key as NSString == "country_flag_image"){
-                    newJob.country_flag_image = value as NSString
+                if(key as! String == "country_flag_image"){
+                    newJob.country_flag_image = value as! String
                 }
-                if(key as NSString == "opening_url"){
-                    newJob.opening_url = value as NSString
+                if(key as! String == "opening_url"){
+                    newJob.opening_url = value as! String
                 }
                 //println("Property: \(key as String)")
                 //println("Value: \"\(value)\"")

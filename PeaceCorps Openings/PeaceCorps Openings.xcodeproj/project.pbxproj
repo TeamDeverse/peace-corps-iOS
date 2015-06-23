@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1426CFD41B3941D3001C2791 /* NeutraText-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1426CFD31B3941D3001C2791 /* NeutraText-Book.otf */; };
+		1426CFD61B3942B9001C2791 /* NeutraText-BookItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1426CFD51B3942B9001C2791 /* NeutraText-BookItalic.otf */; };
+		1426CFD81B3942E6001C2791 /* NeutraText-Demi.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1426CFD71B3942E6001C2791 /* NeutraText-Demi.otf */; };
+		1426CFDA1B394305001C2791 /* NeutraText-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1426CFD91B394305001C2791 /* NeutraText-Bold.otf */; };
 		148313F21B028F2100F06E36 /* diwali.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 148313DE1B028F2100F06E36 /* diwali.jpg */; };
 		148313F31B028F2100F06E36 /* Orange.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 148313DF1B028F2100F06E36 /* Orange.JPG */; };
 		148313F41B028F2100F06E36 /* regionafrica.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 148313E01B028F2100F06E36 /* regionafrica.jpg */; };
@@ -55,6 +59,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1426CFD31B3941D3001C2791 /* NeutraText-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NeutraText-Book.otf"; sourceTree = "<group>"; };
+		1426CFD51B3942B9001C2791 /* NeutraText-BookItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NeutraText-BookItalic.otf"; sourceTree = "<group>"; };
+		1426CFD71B3942E6001C2791 /* NeutraText-Demi.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NeutraText-Demi.otf"; sourceTree = "<group>"; };
+		1426CFD91B394305001C2791 /* NeutraText-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NeutraText-Bold.otf"; sourceTree = "<group>"; };
 		148313DE1B028F2100F06E36 /* diwali.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = diwali.jpg; path = ../imgs/diwali.jpg; sourceTree = "<group>"; };
 		148313DF1B028F2100F06E36 /* Orange.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Orange.JPG; path = ../imgs/Orange.JPG; sourceTree = "<group>"; };
 		148313E01B028F2100F06E36 /* regionafrica.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = regionafrica.jpg; path = ../imgs/regionafrica.jpg; sourceTree = "<group>"; };
@@ -147,6 +155,10 @@
 		96F3DFC21ADDB0DE009F30AA = {
 			isa = PBXGroup;
 			children = (
+				1426CFD91B394305001C2791 /* NeutraText-Bold.otf */,
+				1426CFD71B3942E6001C2791 /* NeutraText-Demi.otf */,
+				1426CFD51B3942B9001C2791 /* NeutraText-BookItalic.otf */,
+				1426CFD31B3941D3001C2791 /* NeutraText-Book.otf */,
 				96F3DFCD1ADDB0DE009F30AA /* PeaceCorps Openings */,
 				96F3DFE31ADDB0DE009F30AA /* PeaceCorps OpeningsTests */,
 				96F3DFCC1ADDB0DE009F30AA /* Products */,
@@ -314,6 +326,10 @@
 				148313FB1B028F2100F06E36 /* regionpacificislands.jpg in Resources */,
 				148313F91B028F2100F06E36 /* regioneasterneuropecentralasia.jpg in Resources */,
 				148313FA1B028F2100F06E36 /* regionnorthafricamiddle.jpg in Resources */,
+				1426CFD41B3941D3001C2791 /* NeutraText-Book.otf in Resources */,
+				1426CFDA1B394305001C2791 /* NeutraText-Bold.otf in Resources */,
+				1426CFD61B3942B9001C2791 /* NeutraText-BookItalic.otf in Resources */,
+				1426CFD81B3942E6001C2791 /* NeutraText-Demi.otf in Resources */,
 				96F3DFD81ADDB0DE009F30AA /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -465,6 +481,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "PeaceCorps Openings/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(SRCROOT/**";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -475,6 +492,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "PeaceCorps Openings/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(SRCROOT/**";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
