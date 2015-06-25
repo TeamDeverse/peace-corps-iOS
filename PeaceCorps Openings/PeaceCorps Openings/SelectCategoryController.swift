@@ -33,7 +33,7 @@ class SelectCategoryController: UIViewController, UICollectionViewDelegateFlowLa
     // collection view stuff //
     
     let reuseIdentifier = "locationCell"
-    
+    // format: (api-id, image name, displayed text, toggle status [defaults])
     var locations: [(String, String, String, Bool)] = [
         ("anywhere", "regionanywhere.jpg", "Anywhere",true),
         ("africa", "regionafrica.jpg", "Africa",false),

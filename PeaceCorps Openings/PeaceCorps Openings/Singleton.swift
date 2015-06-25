@@ -9,8 +9,9 @@
 import Foundation
 
 class Singleton {
-    let jobList = JobList()
+    var jobList = JobList()
     var fittingJobs = JobList()
+    var jobArray = [Job]()
     
     class func sharedInstance() -> Singleton! {
         struct Static {
@@ -26,11 +27,12 @@ class Singleton {
     }
     
     func numOfElements()->Int{
-        return fittingJobs.count
+        //return fittingJobs.count
+        return jobList.count
     }
     
     required init() {
-        iter("http://www.peacecorps.gov/api/v1/openings/?page=1")
+        //iter("http://www.peacecorps.gov/api/v1/openings/?page=1")
     }
 
     func getJSON(urlToRequest: String) -> NSData{
@@ -43,9 +45,26 @@ class Singleton {
         return boardsDictionary
     }
     
+    
+    // new "filtering" function, the only one used now
+    // the one with NSArray was using a method of grabbing all entries and then
+    // having the app parse through the desired ones to show
+    // The method below makes the server only return what we want.
+    func filter(regionArray: String, sectorArray: String)->[Job]{
+        
+        iter("http://www.peacecorps.gov/api/v1/openings/?"+regionArray+"&"+sectorArray+"&page_size=99")
+        //var temp = jobList.headNode
+        jobList.toString()
+        return jobArray
+    }
+    
+    /*
     func filter(regionArray: NSArray, sectorArray: NSArray)->JobList{
-//        var fittingJobs = JobList()
+        //var fittingJobs = JobList()
         var temp = jobList.headNode
+        
+        // previous implemented method with post-grab filtering, replaced by the above pre-gra
+        
         if(jobList.isEmpty()){
             return jobList
         }
@@ -87,15 +106,21 @@ class Singleton {
             fittingJobs.toString()
             return fittingJobs
         }
-    }
+    }*/
 
     func iter(myUrl: String){
+        
+        // clear existing job list
+        //jobList = JobList()
+        jobArray = [Job]()
+        
         var first = getJSON(myUrl)
         var second = parseJSON(first)
         var i = 0
         
-        //find a better constraint
-        while (i < 3){
+        //find a better constraint ; was 3 before, for "3 pages".
+        // should be "while returned != nil" of some kind
+        while (i < 1){
             var dataArray = second["results"]as! NSArray
             
             for item in dataArray { // loop through data items
@@ -168,13 +193,15 @@ class Singleton {
                     //println("Property: \(key as String)")
                     //println("Value: \"\(value)\"")
                 }
-                jobList.insert(newJob)
+                //jobList.insert(newJob)
+                jobArray.append(newJob)
             }
-//            println(second["next"] as NSString)
-            second = parseJSON(getJSON(second["next"] as! String))
+            //println(second["next"] as! NSString)
+            //second = parseJSON(getJSON(second["next"] as! String)) // UN uncomment
             //println((second["next"]?.length())!)
             i++
         }
+        /*
         var dataArray = second["results"] as! NSArray
         
         for item in dataArray { // loop through data items
@@ -249,6 +276,13 @@ class Singleton {
             }
             jobList.insert(newJob)
         }
+        */
+        
+        println("CHECKING THE LIST")
+        println(jobList)
+        println(jobList.count)
+        println(fittingJobs.count)
+        println("where's the other println?")
         return
     }
 

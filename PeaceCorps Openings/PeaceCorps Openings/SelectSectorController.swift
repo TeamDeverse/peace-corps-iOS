@@ -12,10 +12,8 @@ import UIKit
 class SelectSectorController: UIViewController, UICollectionViewDataSource {
     @IBOutlet var nextButton: UIButton!
     @IBOutlet var regionSelection: UICollectionView!
-    //@IBOutlet var regionstring:String!
-    
+    // for previous segue data-passing
     var regionstring:String!
-    
     
     
     override func viewDidLoad() {
@@ -127,16 +125,15 @@ class SelectSectorController: UIViewController, UICollectionViewDataSource {
                 sectorstring = dropLast(sectorstring) // don't include the last &
             }
             
-            println("Regions:")
+            println("Sectors:")
             println(sectorstring)
             
-            println("Checking transfer:")
+            println("Regions:")
             println(regionstring)
             
-            
-            if let viewController: SelectSectorController = segue.destinationViewController as? SelectSectorController {
-                //println(regionstring)
+            if let viewController: ListTableController = segue.destinationViewController as? ListTableController {
                 viewController.regionstring = regionstring
+                viewController.sectorstring = sectorstring
             }
             
         }
