@@ -11,6 +11,9 @@
 		1426CFD61B3942B9001C2791 /* NeutraText-BookItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1426CFD51B3942B9001C2791 /* NeutraText-BookItalic.otf */; };
 		1426CFD81B3942E6001C2791 /* NeutraText-Demi.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1426CFD71B3942E6001C2791 /* NeutraText-Demi.otf */; };
 		1426CFDA1B394305001C2791 /* NeutraText-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1426CFD91B394305001C2791 /* NeutraText-Bold.otf */; };
+		1426CFDC1B3B9EC2001C2791 /* SelectCategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1426CFDB1B3B9EC2001C2791 /* SelectCategoryController.swift */; };
+		1426CFDE1B3BD80C001C2791 /* gridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1426CFDD1B3BD80C001C2791 /* gridCell.swift */; };
+		1426CFE61B3BF5AE001C2791 /* SelectSectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1426CFE51B3BF5AE001C2791 /* SelectSectorController.swift */; };
 		148313F21B028F2100F06E36 /* diwali.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 148313DE1B028F2100F06E36 /* diwali.jpg */; };
 		148313F31B028F2100F06E36 /* Orange.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 148313DF1B028F2100F06E36 /* Orange.JPG */; };
 		148313F41B028F2100F06E36 /* regionafrica.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 148313E01B028F2100F06E36 /* regionafrica.jpg */; };
@@ -18,7 +21,6 @@
 		148313F61B028F2100F06E36 /* regionasia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 148313E21B028F2100F06E36 /* regionasia.jpg */; };
 		148313F71B028F2100F06E36 /* regioncaribbean.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 148313E31B028F2100F06E36 /* regioncaribbean.jpg */; };
 		148313F81B028F2100F06E36 /* regioncentralamericamexico.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 148313E41B028F2100F06E36 /* regioncentralamericamexico.jpg */; };
-		148313F91B028F2100F06E36 /* regioneasterneuropecentralasia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 148313E51B028F2100F06E36 /* regioneasterneuropecentralasia.jpg */; };
 		148313FA1B028F2100F06E36 /* regionnorthafricamiddle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 148313E61B028F2100F06E36 /* regionnorthafricamiddle.jpg */; };
 		148313FB1B028F2100F06E36 /* regionpacificislands.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 148313E71B028F2100F06E36 /* regionpacificislands.jpg */; };
 		148313FC1B028F2100F06E36 /* regionsouthamerica.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 148313E81B028F2100F06E36 /* regionsouthamerica.jpg */; };
@@ -63,6 +65,9 @@
 		1426CFD51B3942B9001C2791 /* NeutraText-BookItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NeutraText-BookItalic.otf"; sourceTree = "<group>"; };
 		1426CFD71B3942E6001C2791 /* NeutraText-Demi.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NeutraText-Demi.otf"; sourceTree = "<group>"; };
 		1426CFD91B394305001C2791 /* NeutraText-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NeutraText-Bold.otf"; sourceTree = "<group>"; };
+		1426CFDB1B3B9EC2001C2791 /* SelectCategoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCategoryController.swift; sourceTree = "<group>"; };
+		1426CFDD1B3BD80C001C2791 /* gridCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gridCell.swift; sourceTree = "<group>"; };
+		1426CFE51B3BF5AE001C2791 /* SelectSectorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectSectorController.swift; sourceTree = "<group>"; };
 		148313DE1B028F2100F06E36 /* diwali.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = diwali.jpg; path = ../imgs/diwali.jpg; sourceTree = "<group>"; };
 		148313DF1B028F2100F06E36 /* Orange.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Orange.JPG; path = ../imgs/Orange.JPG; sourceTree = "<group>"; };
 		148313E01B028F2100F06E36 /* regionafrica.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = regionafrica.jpg; path = ../imgs/regionafrica.jpg; sourceTree = "<group>"; };
@@ -185,6 +190,9 @@
 				968C05691AF08FA80096141F /* Singleton.swift */,
 				96D4A0761ADF3D19004B5457 /* MyPlayground.playground */,
 				96F3DFD41ADDB0DE009F30AA /* Main.storyboard */,
+				1426CFDD1B3BD80C001C2791 /* gridCell.swift */,
+				1426CFE51B3BF5AE001C2791 /* SelectSectorController.swift */,
+				1426CFDB1B3B9EC2001C2791 /* SelectCategoryController.swift */,
 				14CAE6301B03074100E717E7 /* ListTableController.swift */,
 				14CAE6341B031D2800E717E7 /* ResultEntryController.swift */,
 				14CAE6321B03126300E717E7 /* resultsCellView.swift */,
@@ -324,7 +332,6 @@
 				96F3DFDB1ADDB0DE009F30AA /* LaunchScreen.xib in Resources */,
 				148313FD1B028F2100F06E36 /* sectoragriculture.jpg in Resources */,
 				148313FB1B028F2100F06E36 /* regionpacificislands.jpg in Resources */,
-				148313F91B028F2100F06E36 /* regioneasterneuropecentralasia.jpg in Resources */,
 				148313FA1B028F2100F06E36 /* regionnorthafricamiddle.jpg in Resources */,
 				1426CFD41B3941D3001C2791 /* NeutraText-Book.otf in Resources */,
 				1426CFDA1B394305001C2791 /* NeutraText-Bold.otf in Resources */,
@@ -351,11 +358,14 @@
 				968C05681AF08CA90096141F /* SelectCategoryView.swift in Sources */,
 				96F3DFD31ADDB0DE009F30AA /* ViewController.swift in Sources */,
 				962175F11AEAC2200062471E /* JobList.swift in Sources */,
+				1426CFDC1B3B9EC2001C2791 /* SelectCategoryController.swift in Sources */,
 				14CAE6351B031D2800E717E7 /* ResultEntryController.swift in Sources */,
 				14CAE6311B03074100E717E7 /* ListTableController.swift in Sources */,
+				1426CFE61B3BF5AE001C2791 /* SelectSectorController.swift in Sources */,
 				968C056A1AF08FA80096141F /* Singleton.swift in Sources */,
 				96F3DFD11ADDB0DE009F30AA /* AppDelegate.swift in Sources */,
 				14CAE6331B03126300E717E7 /* resultsCellView.swift in Sources */,
+				1426CFDE1B3BD80C001C2791 /* gridCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

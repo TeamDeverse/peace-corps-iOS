@@ -8,10 +8,12 @@
 
 import Foundation
 import UIKit
-var regionArray = ["anywhere"];
-var sectorArray = ["anything"];
+
 
 class SelectCategoryView: UIViewController {
+    var regionArray = ["anywhere"];
+    var sectorArray = ["anything"];
+    
     let singleton = Singleton()
     @IBOutlet weak var AnywhereView: UIButton!
     @IBOutlet weak var AfricaView: UIButton!
