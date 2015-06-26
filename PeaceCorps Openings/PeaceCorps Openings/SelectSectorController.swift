@@ -19,6 +19,11 @@ class SelectSectorController: UIViewController, UICollectionViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         regionSelection.backgroundColor = UIColor.clearColor()
+        
+        // make it larger on ipads
+        if UIDevice.currentDevice().userInterfaceIdiom == .Pad{
+            nextButton.titleLabel?.font = UIFont(name: nextButton.titleLabel!.font.fontName, size: 24)
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -38,11 +43,11 @@ class SelectSectorController: UIViewController, UICollectionViewDataSource {
         ("anything", "sectoranything.jpg", "Anything",true),
         ("", "", "",false),
         ("agriculture", "sectoragriculture.jpg", "Agriculture",false),
-        ("community", "sectorcommunity.jpg","Community Economic Development",false),
+        ("Community%20Economic%20Development", "sectorcommunity.jpg","Community Economic Development",false),
         ("education", "sectoreducation.jpg", "Education",false),
         ("environment", "sectorenvironment.jpg", "Environment",false),
         ("health", "sectorhealth.jpg", "Health",false),
-        ("youth", "sectoryouth.jpg", "Youth in Development",false)
+        ("Youth%20in%20Development", "sectoryouth.jpg", "Youth in Development",false)
     ]
     
     
@@ -74,12 +79,18 @@ class SelectSectorController: UIViewController, UICollectionViewDataSource {
         cell.tintLabel.backgroundColor = UIColor.clearColor()
         cell.backgroundColor = UIColor.clearColor()
         
+        // make it larger on ipads
+        if UIDevice.currentDevice().userInterfaceIdiom == .Pad{
+            cell.title.font = UIFont(name: cell.title.font.fontName, size: 34)
+        }
+        
         // define the states of selection by coloring the cell or not
         if sectors[indexPath.row].3{
-            cell.tintLabel.backgroundColor = UIColor(red:193/256, green:107/256,blue:50/256,alpha:0.7)
+            //cell.tintLabel.backgroundColor = UIColor(red:193/256, green:107/256,blue:50/256,alpha:0.7)
+            cell.tintLabel.backgroundColor = UIColor(red:170/256, green:44/256,blue:44/256,alpha:0.7)
         }
-        else{
-            cell.tintLabel.backgroundColor = UIColor.clearColor()
+        else if indexPath.row != 0 && indexPath.row != 2{
+            cell.tintLabel.backgroundColor = UIColor(red:0/256, green:0/256,blue:0/256,alpha:0.1)
         }
         return cell
     }
@@ -125,15 +136,14 @@ class SelectSectorController: UIViewController, UICollectionViewDataSource {
                 sectorstring = dropLast(sectorstring) // don't include the last &
             }
             
-            println("Sectors:")
-            println(sectorstring)
+            //println("Sectors:")
+            //println(sectorstring)
             
-            println("Regions:")
-            println(regionstring)
+            //println("Regions:")
+            //println(regionstring)
             
             if let viewController: ListTableController = segue.destinationViewController as? ListTableController {
-                viewController.regionstring = regionstring
-                viewController.sectorstring = sectorstring
+                viewController.urlString = regionstring+"&"+sectorstring
             }
             
         }

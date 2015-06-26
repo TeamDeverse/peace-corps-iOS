@@ -20,6 +20,11 @@ class SelectCategoryController: UIViewController, UICollectionViewDelegateFlowLa
     override func viewDidLoad() {
         super.viewDidLoad()
         regionSelection.backgroundColor = UIColor.clearColor()
+        
+        // make it larger on ipads
+        if UIDevice.currentDevice().userInterfaceIdiom == .Pad{
+            nextButton.titleLabel?.font = UIFont(name: nextButton.titleLabel!.font.fontName, size: 24)
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -39,11 +44,11 @@ class SelectCategoryController: UIViewController, UICollectionViewDelegateFlowLa
         ("africa", "regionafrica.jpg", "Africa",false),
         ("asia", "regionasia.jpg", "Asia",false),
         ("centralamerica", "regioncentralamericamexico.jpg", "Central America & Mexico",false),
-        ("europe", "regioneasterneuropecentralasia.jpg","Eastern Europe and Central Asia",false),
+        ("easteurope", "regioneasterneuropecentralasia.jpg","Eastern Europe and Central Asia",false),
         ("northafrica", "regionnorthafricamiddle.jpg", "North Africa",false),
         ("pacificislands", "regionpacificislands.jpg", "Pacific Islands",false),
         ("southamerica", "regionsouthamerica.jpg", "South America",false),
-        ("carribean", "regioncaribbean.jpg", "The Carribean",false)
+        ("caribbean", "regioncaribbean.jpg", "The Caribbean",false)
     ]
     
     
@@ -75,12 +80,17 @@ class SelectCategoryController: UIViewController, UICollectionViewDelegateFlowLa
         cell.tintLabel.backgroundColor = UIColor.clearColor()
         cell.backgroundColor = UIColor.clearColor()
         
+        // make it larger on ipads
+        if UIDevice.currentDevice().userInterfaceIdiom == .Pad{
+            cell.title.font = UIFont(name: cell.title.font.fontName, size: 34)
+        }
+        
         // define the states of selection by coloring the cell or not
         if locations[indexPath.row].3{
             cell.tintLabel.backgroundColor = UIColor(red:193/256, green:107/256,blue:50/256,alpha:0.7)
         }
         else{
-            cell.tintLabel.backgroundColor = UIColor.clearColor()
+            cell.tintLabel.backgroundColor = UIColor(red:0/256, green:0/256,blue:0/256,alpha:0.1)
         }
         return cell
     }

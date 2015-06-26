@@ -28,8 +28,18 @@ class Singleton {
     
     func numOfElements()->Int{
         //return fittingJobs.count
-        return jobList.count
+        return jobArray.count
     }
+    
+    // setters and getters
+    func getJobFromIndex(id:Int) ->Job{
+        //println("Checking")
+        return jobArray[id]
+    }
+    func setJobAtIndex(id:Int, updateJob:Job){
+        jobArray[id] = updateJob
+    }
+    
     
     required init() {
         //iter("http://www.peacecorps.gov/api/v1/openings/?page=1")
@@ -50,12 +60,11 @@ class Singleton {
     // the one with NSArray was using a method of grabbing all entries and then
     // having the app parse through the desired ones to show
     // The method below makes the server only return what we want.
-    func filter(regionArray: String, sectorArray: String)->[Job]{
+    func filter(urlInput: String){//->[Job]{
         
-        iter("http://www.peacecorps.gov/api/v1/openings/?"+regionArray+"&"+sectorArray+"&page_size=99")
+        iter("http://www.peacecorps.gov/api/v1/openings/?"+urlInput+"&page_size=99")
         //var temp = jobList.headNode
-        jobList.toString()
-        return jobArray
+        //return jobArray
     }
     
     /*
@@ -112,15 +121,17 @@ class Singleton {
         
         // clear existing job list
         //jobList = JobList()
-        jobArray = [Job]()
-        
-        var first = getJSON(myUrl)
-        var second = parseJSON(first)
+        self.jobArray = [Job]()
         var i = 0
+        var url = myUrl
         
         //find a better constraint ; was 3 before, for "3 pages".
         // should be "while returned != nil" of some kind
-        while (i < 1){
+        while (url != "null" || i==10){
+            
+            var first = getJSON(url)
+            var second = parseJSON(first)
+            
             var dataArray = second["results"]as! NSArray
             
             for item in dataArray { // loop through data items
@@ -145,7 +156,7 @@ class Singleton {
                     if(key as! String == "apply_date"){
                         newJob.apply_date = value as! String
                     }
-                    if(key as! String == "know_by"){
+                    if(key as! String == "know_date"){
                         newJob.know_by = value as! String
                     }
                     if(key as! String == "staging_start_date"){
@@ -194,95 +205,19 @@ class Singleton {
                     //println("Value: \"\(value)\"")
                 }
                 //jobList.insert(newJob)
-                jobArray.append(newJob)
+                self.jobArray.append(newJob)
             }
             //println(second["next"] as! NSString)
             //second = parseJSON(getJSON(second["next"] as! String)) // UN uncomment
             //println((second["next"]?.length())!)
             i++
-        }
-        /*
-        var dataArray = second["results"] as! NSArray
-        
-        for item in dataArray { // loop through data items
-            let obj = item as! NSDictionary
-            var newJob = Job()
-            for (key, value) in obj {
-                if(key as! String == "title"){
-                    newJob.title = value as! String
-                }
-                if(key as! String == "req_id"){
-                    newJob.req_id = value as! String
-                }
-                if(key as! String == "country"){
-                    newJob.country = value as! String
-                }
-                if(key as! String == "region"){
-                    newJob.region = value as! String
-                }
-                if(key as! String == "sector"){
-                    newJob.sector = value as! String
-                }
-                if(key as! String == "apply_date"){
-                    newJob.apply_date = value as! String
-                }
-                if(key as! String == "know_by"){
-                    newJob.know_by = value as! String
-                }
-                if(key as! String == "staging_start_date"){
-                    newJob.staging_start_date = value as! String
-                }
-                if(key as! String == "featured"){
-                    newJob.featured = value as! Bool
-                }
-                if(key as! String == "project_description"){
-                    newJob.project_description = value as! String
-                }
-                if(key as! String == "required_skills"){
-                    newJob.required_skills = value as! String
-                }
-                if(key as! String == "desired_skills"){
-                    newJob.desired_skills = value as! String
-                }
-                if(key as! String == "language_skills"){
-                    newJob.language_skills = value as! String
-                }
-                if(key as! String == "language_skills_comments"){
-                    newJob.language_skills_comments = value as! String
-                }
-                if(key as! String == "volunteers_requested"){
-                    newJob.volunteers_requested = value as! Int
-                }
-                if(key as! String == "accepts_couples"){
-                    newJob.accepts_couples = value as! Bool
-                }
-                if(key as! String == "living_conditions_comments"){
-                    newJob.living_conditions_comments = value as! String
-                }
-                if(key as! String == "country_medical_considerations"){
-                    newJob.country_medical_considerations = value as! String
-                }
-                if(key as! String == "country_site_url"){
-                    newJob.country_site_url = value as! String
-                }
-                if(key as! String == "country_flag_image"){
-                    newJob.country_flag_image = value as! String
-                }
-                if(key as! String == "opening_url"){
-                    newJob.opening_url = value as! String
-                }
-                //println("Property: \(key as String)")
-                //println("Value: \"\(value)\"")
+            if second["next"] is NSNull{
+                break
             }
-            jobList.insert(newJob)
+            url = second["next"]as! String
         }
-        */
-        
-        println("CHECKING THE LIST")
-        println(jobList)
-        println(jobList.count)
-        println(fittingJobs.count)
-        println("where's the other println?")
+        //println("CHECKING THE LIST")
+        //println(jobArray)
         return
     }
 

@@ -11,9 +11,25 @@ import UIKit
 
 
 class ViewController: UIViewController {
+    @IBOutlet var buttonTop: UIButton!
+    @IBOutlet var buttonMiddle: UIButton!
+    @IBOutlet var buttonBottom: UIButton!
+    @IBOutlet var aboutButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var logButton : UIBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: self, action: "infoButtonAction")
+        self.navigationItem.rightBarButtonItem = logButton
+        
+        // make it larger on ipads
+        if UIDevice.currentDevice().userInterfaceIdiom == .Pad{
+            buttonTop.titleLabel?.font = UIFont(name: buttonTop.titleLabel!.font.fontName, size: 30)
+            buttonMiddle.titleLabel?.font = UIFont(name: buttonMiddle.titleLabel!.font.fontName, size: 30)
+            buttonBottom.titleLabel?.font = UIFont(name: buttonBottom.titleLabel!.font.fontName, size: 30)
+            aboutButton.titleLabel?.font = UIFont(name: aboutButton.titleLabel!.font.fontName, size: 30)
+        }
+        
         
     }
     
@@ -25,3 +41,4 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 }
+

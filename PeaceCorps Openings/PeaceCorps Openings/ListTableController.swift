@@ -8,35 +8,22 @@
 
 import UIKit
 let single = Singleton()
-//let arrays = SelectCategoryView()
 
 //class ListTable: UIViewController, UITableViewDelegate, UITableViewDataSource {
 class ListTableController: UITableViewController {
     
-    // getting data from segue
-    var regionstring:String!
-    var sectorstring:String!
     
-    // let data = data()
-    var fitting = JobList()
-    var jobArray = [Job]()
-    //var temp = Node<Job>()
+    // getting data from segue
+    var urlString:String!
+    
     var temp: Job!
-    var start = 0
     var tempIndex = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // set the view title to "loading"
+        single.filter(urlString)
+        //println("it's loaded...kinda b")
         
-//        var region = arrays.region()
-//        var sector = arrays.sector()
-//        println(region)
-        jobArray = single.filter(regionstring, sectorArray: sectorstring)
-        println("it's loaded...kinda b")
-        //tableView.backgroundColor = UIColor.grayColor()
-        
-        // set the view title back to Listings
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -45,29 +32,37 @@ class ListTableController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //let shared = single.numOfElements()
-        println("Number of elements passed in (rows):")
-        //temp = temp.next!
-        //println(shared)
-        return jobArray.count
+        if single.numOfElements()==0{
+            self.title = "No results found"
+        }
+        else if single.numOfElements()==1{
+            self.title = "Found \(single.numOfElements()) opening"
+        }
+        else if single.numOfElements()==99{
+            self.title = "Found \(single.numOfElements())+ openings"
+        }
+        else{
+            self.title = "Found \(single.numOfElements()) openings"
+        }
+        return single.numOfElements()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: tempIndex, inSection: 0)], withRowAnimation: UITableViewRowAnimation.None)
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
         // set the type of cell based on the storyboard cell prototype and associated class
         var cell:resultsCellView = tableView.dequeueReusableCellWithIdentifier("ResultsCell", forIndexPath: indexPath) as! resultsCellView
-        /*if (start == 0){
-            temp = fitting.headNode
-        }
-        else{
-            if(temp.next != nil){
-                temp = temp.next!
-            }
-            else{
-                return cell
-            }
-        }*/
         
-        temp = jobArray[indexPath.row]
+        
+        if single.numOfElements()==0{
+            cell.titleLabel!.text = "No results found"
+            return cell
+        }
+        
+        temp = single.getJobFromIndex(indexPath.row) //jobArray[indexPath.row]
         //
         // HERE we should take the information for the ith back end element of the list (i=indexPath.row)
         // and set the following elements to show this.
@@ -75,15 +70,22 @@ class ListTableController: UITableViewController {
         // set fields from passed in data
         cell.titleLabel!.text = temp.title
         cell.sectorLabel!.text = temp.sector
-        cell.countryRegionLabel!.text = temp.region
-        cell.departByLabel!.text = temp.staging_start_date
+        cell.countryRegionLabel!.text = (temp.country+", "+temp.region).capitalizedString
+        cell.departByLabel!.text = "Departs: "+temp.staging_start_date
+        cell.index = indexPath.row
+        if temp.favorited{
+            cell.favButton.setImage(UIImage(named:"Star-Favorites"), forState: .Normal)
+        }
+        else{
+            cell.favButton.setImage(UIImage(named:"star_none"), forState: .Normal)
+        }
+        cell.backgroundColor = UIColor(red:225/256, green:223/256,blue:198/256,alpha:1)
         // temporary test variable, should read from the passed in data
         // also set the favorites button state.
         
-        start = 1
         // arrays for checking and setting which image to use
-        let sectormatcharray = ["Agriculture","Community","Education","Environment","Health","Youth","Youth in Development"]
-        let sectorimgsarray = ["sectoragriculture.jpg","sectorcommunity.jpg","sectoreducation.jpg","sectorenvironment.jpg","sectorhealth.jpg","sectoryouth.jpg","sectoryouth.jpg"]
+        let sectormatcharray = ["Agriculture","Community","Education","Environment","Health","Youth","Youth in Development","Community Economic Development"]
+        let sectorimgsarray = ["sectoragriculture.jpg","sectorcommunity.jpg","sectoreducation.jpg","sectorenvironment.jpg","sectorhealth.jpg","sectoryouth.jpg","sectoryouth.jpg","sectorcommunity.jpg"]
         
         // make similar arrays for the region.. then make background of cell colored and the actual
         // image be the region
@@ -103,8 +105,9 @@ class ListTableController: UITableViewController {
     // run the segue transition on tapping an entry
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
+        tempIndex = indexPath.row // set this so we know how many in the linked list to move through // was before
         self.performSegueWithIdentifier("toResult", sender: indexPath);
-        tempIndex = indexPath.row // set this so we know how many in the linked list to move through
+        
 
     }
     
@@ -117,24 +120,12 @@ class ListTableController: UITableViewController {
             //    temp1 = temp1.next!
             //}
             
-            var temp1: Job!
-            temp1 = jobArray[tempIndex]
-            
-            // STEP 2: Assign the variable to the value from the node here
+            // Assign the variable to the value from the node here
             // instead of all this.. just pass the job INDEX in the singleton.
             
             var destinationVC:ResultEntryController = ResultEntryController()
             destinationVC = segue.destinationViewController as! ResultEntryController
-            destinationVC.titleString = temp1.title
-            destinationVC.sectorLabel = temp1.sector
-            destinationVC.describe = temp1.project_description
-            destinationVC.skills = temp1.required_skills
-            destinationVC.living = temp1.living_conditions_comments
-            destinationVC.all_dates = (temp1.apply_date as String) + "/" + (temp1.know_by as String) + "/" + (temp1.staging_start_date as String)
-            destinationVC.open = String(temp1.volunteers_requested)
-            destinationVC.region = temp1.region
-            println(temp1.title)
-            println(temp1.sector)
+            destinationVC.indexRow = tempIndex
             
         }
     }

@@ -28,6 +28,7 @@ struct Job{
     var country_site_url    : String = ""
     var country_flag_image  : String = ""
     var opening_url : String = ""
+    var favorited : Bool = false
 }
 class Node<T>{
     var value: T?

@@ -15,6 +15,8 @@ class resultsCellView: UITableViewCell {
     @IBOutlet var countryRegionLabel: UILabel!
     @IBOutlet var departByLabel: UILabel!
     @IBOutlet var imgView: UIImageView!
+    @IBOutlet var favButton: UIButton!
+    var index:Int!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,5 +24,23 @@ class resultsCellView: UITableViewCell {
     
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    @IBAction func favToggle(sender: AnyObject) {
+        
+        var jobEntry = single.getJobFromIndex(index)
+        if jobEntry.favorited == false{
+            // call singleton, make it True
+            favButton.setImage(UIImage(named:"Star-Favorites"), forState: .Normal)
+            jobEntry.favorited = true
+            single.setJobAtIndex(index, updateJob: jobEntry)
+        }
+        else{
+            // call singleton, make it False
+            favButton.setImage(UIImage(named:"star_none"), forState: .Normal)
+            jobEntry.favorited = false
+            single.setJobAtIndex(index, updateJob: jobEntry)
+        }
+        
+        
     }
 }

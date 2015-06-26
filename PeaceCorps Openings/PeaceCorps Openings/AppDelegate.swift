@@ -13,9 +13,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        UINavigationBar.appearance().barTintColor = UIColor(red: 0/255.0, green: 115/255.0, blue: 121/255.0, alpha: 1)
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        if let font = UIFont(name: "Neutraface Text", size: 22) {
+            UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName : font, NSForegroundColorAttributeName : UIColor.whiteColor()]
+        }
+
+        //UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: UIColor.whiteColor()]
+        //UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
+        
         return true
     }
 
@@ -43,4 +52,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
+
 

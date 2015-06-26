@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14051D8F1B3D4A0D000829A3 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 14051D8E1B3D4A0D000829A3 /* info.png */; };
+		14051D911B3D52FE000829A3 /* about.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14051D901B3D52FE000829A3 /* about.swift */; };
+		14051D931B3D64FA000829A3 /* keywordSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14051D921B3D64FA000829A3 /* keywordSearch.swift */; };
 		1426CFD41B3941D3001C2791 /* NeutraText-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1426CFD31B3941D3001C2791 /* NeutraText-Book.otf */; };
 		1426CFD61B3942B9001C2791 /* NeutraText-BookItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1426CFD51B3942B9001C2791 /* NeutraText-BookItalic.otf */; };
 		1426CFD81B3942E6001C2791 /* NeutraText-Demi.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1426CFD71B3942E6001C2791 /* NeutraText-Demi.otf */; };
@@ -61,6 +64,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14051D8E1B3D4A0D000829A3 /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
+		14051D901B3D52FE000829A3 /* about.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = about.swift; sourceTree = "<group>"; };
+		14051D921B3D64FA000829A3 /* keywordSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = keywordSearch.swift; sourceTree = "<group>"; };
 		1426CFD31B3941D3001C2791 /* NeutraText-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NeutraText-Book.otf"; sourceTree = "<group>"; };
 		1426CFD51B3942B9001C2791 /* NeutraText-BookItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NeutraText-BookItalic.otf"; sourceTree = "<group>"; };
 		1426CFD71B3942E6001C2791 /* NeutraText-Demi.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NeutraText-Demi.otf"; sourceTree = "<group>"; };
@@ -160,6 +166,7 @@
 		96F3DFC21ADDB0DE009F30AA = {
 			isa = PBXGroup;
 			children = (
+				14051D8E1B3D4A0D000829A3 /* info.png */,
 				1426CFD91B394305001C2791 /* NeutraText-Bold.otf */,
 				1426CFD71B3942E6001C2791 /* NeutraText-Demi.otf */,
 				1426CFD51B3942B9001C2791 /* NeutraText-BookItalic.otf */,
@@ -190,6 +197,8 @@
 				968C05691AF08FA80096141F /* Singleton.swift */,
 				96D4A0761ADF3D19004B5457 /* MyPlayground.playground */,
 				96F3DFD41ADDB0DE009F30AA /* Main.storyboard */,
+				14051D921B3D64FA000829A3 /* keywordSearch.swift */,
+				14051D901B3D52FE000829A3 /* about.swift */,
 				1426CFDD1B3BD80C001C2791 /* gridCell.swift */,
 				1426CFE51B3BF5AE001C2791 /* SelectSectorController.swift */,
 				1426CFDB1B3B9EC2001C2791 /* SelectCategoryController.swift */,
@@ -314,6 +323,7 @@
 				148313F51B028F2100F06E36 /* regionanywhere.jpg in Resources */,
 				96A79BE31B028E370026879B /* imgs in Resources */,
 				96F3DFD61ADDB0DE009F30AA /* Main.storyboard in Resources */,
+				14051D8F1B3D4A0D000829A3 /* info.png in Resources */,
 				148314001B028F2100F06E36 /* sectoreducation.jpg in Resources */,
 				148313F41B028F2100F06E36 /* regionafrica.jpg in Resources */,
 				148313F61B028F2100F06E36 /* regionasia.jpg in Resources */,
@@ -360,12 +370,14 @@
 				962175F11AEAC2200062471E /* JobList.swift in Sources */,
 				1426CFDC1B3B9EC2001C2791 /* SelectCategoryController.swift in Sources */,
 				14CAE6351B031D2800E717E7 /* ResultEntryController.swift in Sources */,
+				14051D911B3D52FE000829A3 /* about.swift in Sources */,
 				14CAE6311B03074100E717E7 /* ListTableController.swift in Sources */,
 				1426CFE61B3BF5AE001C2791 /* SelectSectorController.swift in Sources */,
 				968C056A1AF08FA80096141F /* Singleton.swift in Sources */,
 				96F3DFD11ADDB0DE009F30AA /* AppDelegate.swift in Sources */,
 				14CAE6331B03126300E717E7 /* resultsCellView.swift in Sources */,
 				1426CFDE1B3BD80C001C2791 /* gridCell.swift in Sources */,
+				14051D931B3D64FA000829A3 /* keywordSearch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
