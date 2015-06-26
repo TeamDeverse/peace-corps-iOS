@@ -17,6 +17,7 @@
 		1426CFDC1B3B9EC2001C2791 /* SelectCategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1426CFDB1B3B9EC2001C2791 /* SelectCategoryController.swift */; };
 		1426CFDE1B3BD80C001C2791 /* gridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1426CFDD1B3BD80C001C2791 /* gridCell.swift */; };
 		1426CFE61B3BF5AE001C2791 /* SelectSectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1426CFE51B3BF5AE001C2791 /* SelectSectorController.swift */; };
+		144F2F6A1B3DB73D0023D4B1 /* storedJobs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 144F2F691B3DB73D0023D4B1 /* storedJobs.plist */; };
 		148313F21B028F2100F06E36 /* diwali.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 148313DE1B028F2100F06E36 /* diwali.jpg */; };
 		148313F31B028F2100F06E36 /* Orange.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 148313DF1B028F2100F06E36 /* Orange.JPG */; };
 		148313F41B028F2100F06E36 /* regionafrica.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 148313E01B028F2100F06E36 /* regionafrica.jpg */; };
@@ -74,6 +75,7 @@
 		1426CFDB1B3B9EC2001C2791 /* SelectCategoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCategoryController.swift; sourceTree = "<group>"; };
 		1426CFDD1B3BD80C001C2791 /* gridCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gridCell.swift; sourceTree = "<group>"; };
 		1426CFE51B3BF5AE001C2791 /* SelectSectorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectSectorController.swift; sourceTree = "<group>"; };
+		144F2F691B3DB73D0023D4B1 /* storedJobs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = storedJobs.plist; sourceTree = "<group>"; };
 		148313DE1B028F2100F06E36 /* diwali.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = diwali.jpg; path = ../imgs/diwali.jpg; sourceTree = "<group>"; };
 		148313DF1B028F2100F06E36 /* Orange.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Orange.JPG; path = ../imgs/Orange.JPG; sourceTree = "<group>"; };
 		148313E01B028F2100F06E36 /* regionafrica.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = regionafrica.jpg; path = ../imgs/regionafrica.jpg; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 		96F3DFCE1ADDB0DE009F30AA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				144F2F691B3DB73D0023D4B1 /* storedJobs.plist */,
 				96F3DFCF1ADDB0DE009F30AA /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -333,6 +336,7 @@
 				148314051B028F2100F06E36 /* third.jpg in Resources */,
 				148313FF1B028F2100F06E36 /* sectorcommunity.jpg in Resources */,
 				14CAE6381B03282900E717E7 /* star_none.png in Resources */,
+				144F2F6A1B3DB73D0023D4B1 /* storedJobs.plist in Resources */,
 				14CAE6391B03282900E717E7 /* Star-Favorites.png in Resources */,
 				148313FC1B028F2100F06E36 /* regionsouthamerica.jpg in Resources */,
 				148314031B028F2100F06E36 /* sectoryouth.jpg in Resources */,

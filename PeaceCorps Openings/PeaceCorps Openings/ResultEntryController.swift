@@ -87,13 +87,13 @@ class ResultEntryController: UIViewController {
             // call singleton, make it True
             favoriteButton.setImage(UIImage(named:"Star-Favorites"), forState: .Normal)
             jobEntry.favorited = true
-            single.setJobAtIndex(indexRow, updateJob: jobEntry)
+            single.setFavotireAtInted(indexRow, favorited: true)
         }
         else{
             // call singleton, make it False
             favoriteButton.setImage(UIImage(named:"star_none"), forState: .Normal)
             jobEntry.favorited = false
-            single.setJobAtIndex(indexRow, updateJob: jobEntry)
+            single.setFavotireAtInted(indexRow, favorited: false)
         }
     }
     

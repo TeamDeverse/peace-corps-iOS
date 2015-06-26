@@ -144,6 +144,7 @@ class SelectSectorController: UIViewController, UICollectionViewDataSource {
             
             if let viewController: ListTableController = segue.destinationViewController as? ListTableController {
                 viewController.urlString = regionstring+"&"+sectorstring
+                viewController.showingOnlyFavorites=false
             }
             
         }

@@ -51,8 +51,7 @@ class keywordSearch: UIViewController {
             
             if let viewController: ListTableController = segue.destinationViewController as? ListTableController {
                 viewController.urlString = "keyword="+newString
-                println("running segue")
-                println(newString)
+                viewController.showingOnlyFavorites=false
             }
             
         }

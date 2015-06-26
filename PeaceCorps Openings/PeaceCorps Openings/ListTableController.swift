@@ -15,13 +15,19 @@ class ListTableController: UITableViewController {
     
     // getting data from segue
     var urlString:String!
+    var showingOnlyFavorites:Bool!
     
     var temp: Job!
     var tempIndex = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        single.filter(urlString)
+        if self.showingOnlyFavorites == false{
+            single.filter(self.urlString)
+        }
+        else{
+            single.showFavorites()
+        }
         //println("it's loaded...kinda b")
         
     }

@@ -37,7 +37,79 @@ class Singleton {
         return jobArray[id]
     }
     func setJobAtIndex(id:Int, updateJob:Job){
+        var samestate = (jobArray[id].favorited == updateJob.favorited)
         jobArray[id] = updateJob
+        // check if favorited changed
+        if samestate == false{
+            setFavotireAtInted(id, favorited: updateJob.favorited)
+        }
+    }
+    
+    func showFavorites(){
+        // set favorites to be in the array of lists
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
+        let documentsDirectory = paths[0] as! String
+        let path = documentsDirectory.stringByAppendingPathComponent("storedJobs")
+        let fileManager = NSFileManager.defaultManager()
+        //check if file exists
+        if(!fileManager.fileExistsAtPath(path)) {
+            return // error, plist couldn't be found
+        }
+        
+        let storedJobs = NSMutableDictionary(contentsOfFile: path)
+        if let dict = storedJobs {
+            
+                
+            jobArray.removeAll(keepCapacity: false)
+            for (j, vals) in dict{
+                jobArray.append(jobFromDictionary((vals as? Dictionary<String, AnyObject>)!)) // convert it to a Job!
+            }
+            
+            
+        } else {
+            println("error accessing plist")
+        }
+        
+    }
+    
+    func setFavotireAtInted(id:Int, favorited: Bool){
+        jobArray[id].favorited = favorited
+        
+        // do stuff, save to/from plist etc
+        
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
+        let documentsDirectory = paths[0] as! String
+        let path = documentsDirectory.stringByAppendingPathComponent("storedJobs")
+        let fileManager = NSFileManager.defaultManager()
+        //check if file exists
+        if(!fileManager.fileExistsAtPath(path)) {
+            return // error, plist couldn't be found
+        }
+        
+        let storedJobs = NSMutableDictionary(contentsOfFile: path)
+        if let dict = storedJobs {
+            if jobArray[id].favorited{
+                // add or update the ID to the list
+                //dict[jobArray[id].req_id] = "hello!" // call a func that makes dictionary out of Job object
+                let v = jobArray[id].toDictionary()
+                //dict[jobArray[id].req_id] = v as? Dictionary<String, AnyObject>
+                dict[jobArray[id].req_id] = v
+                
+                //dict[jobArray[id].req_id] = dict as NSDictionary
+                println(dict)
+                dict.writeToFile(path, atomically: false)
+            }
+            else{
+                // remove this ID from the dictionary
+                dict.removeObjectForKey(jobArray[id].req_id)
+                dict.writeToFile(path, atomically: false)
+            }
+            
+        } else {
+            println("error accessing plist")
+        }
+        
+        
     }
     
     
@@ -54,6 +126,7 @@ class Singleton {
         
         return boardsDictionary
     }
+    
     
     
     // new "filtering" function, the only one used now

@@ -104,7 +104,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="q1d-f6-7Sk" kind="show" id="XcY-b5-fUU"/>
+                                    <segue destination="7Sc-LX-jBw" kind="show" identifier="showFavorites" id="aXq-Zq-P0w"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POq-fw-ywy">
@@ -281,26 +281,6 @@
             </objects>
             <point key="canvasLocation" x="891" y="869"/>
         </scene>
-        <!--Favorites-->
-        <scene sceneID="NLu-oW-2kM">
-            <objects>
-                <tableViewController id="166-Ar-eYl" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="bc2-wa-UgI">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <connections>
-                            <outlet property="dataSource" destination="166-Ar-eYl" id="IZ4-QT-lzH"/>
-                            <outlet property="delegate" destination="166-Ar-eYl" id="8Dc-fN-XzE"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Favorites" id="gg4-ed-UPV"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="J12-I2-NfQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="59" y="2300"/>
-        </scene>
         <!--About-->
         <scene sceneID="J5u-mg-S7t">
             <objects>
@@ -431,23 +411,6 @@ Peace Corps Representatives: Dan Ingala, Katrina Browser</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JX7-Eg-PsS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-906" y="2282"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Lub-ox-gjH">
-            <objects>
-                <navigationController id="q1d-f6-7Sk" sceneMemberID="viewController">
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QXu-Uy-FCO">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="166-Ar-eYl" kind="relationship" relationship="rootViewController" id="IXd-C4-4TA"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="k1n-4o-dOI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-385" y="2300"/>
         </scene>
         <!--Result Entry Controller-->
         <scene sceneID="F6W-hh-l8C">
@@ -1037,6 +1000,6 @@ Peace Corps Representatives: Dan Ingala, Katrina Browser</string>
         <image name="third.jpg" width="320" height="169"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Gm9-BB-1EC"/>
+        <segue reference="aXq-Zq-P0w"/>
     </inferredMetricsTieBreakers>
 </document>

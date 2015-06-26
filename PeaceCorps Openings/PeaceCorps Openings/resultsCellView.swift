@@ -32,13 +32,13 @@ class resultsCellView: UITableViewCell {
             // call singleton, make it True
             favButton.setImage(UIImage(named:"Star-Favorites"), forState: .Normal)
             jobEntry.favorited = true
-            single.setJobAtIndex(index, updateJob: jobEntry)
+            single.setFavotireAtInted(index, favorited: true)
         }
         else{
             // call singleton, make it False
             favButton.setImage(UIImage(named:"star_none"), forState: .Normal)
             jobEntry.favorited = false
-            single.setJobAtIndex(index, updateJob: jobEntry)
+            single.setFavotireAtInted(index, favorited: false)
         }
         
         

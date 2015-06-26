@@ -29,6 +29,102 @@ struct Job{
     var country_flag_image  : String = ""
     var opening_url : String = ""
     var favorited : Bool = false
+    
+    init(){
+        self.title=""
+        self.req_id=""
+        self.country=""
+        self.region=""
+        self.sector=""
+        self.apply_date=""
+        self.know_by=""
+        self.staging_start_date=""
+        self.featured=false
+        self.project_description=""
+        self.required_skills=""
+        self.desired_skills=""
+        self.language_skills=""
+        self.language_skills_comments=""
+        self.volunteers_requested=0
+        self.accepts_couples=false
+        self.living_conditions_comments=""
+        self.country_medical_considerations=""
+        self.country_site_url=""
+        self.country_flag_image=""
+        self.opening_url=""
+        self.favorited=false
+    }
+    
+    // define the functions
+    func toDictionary() -> Dictionary<String, Any>{
+        var d = Dictionary<String, Any>()
+        
+        d["title"]=self.title
+        d["req_id"]=self.req_id
+        d["country"]=self.country
+        d["region"]=self.region
+        d["sector"]=self.sector
+        d["apply_date"]=self.apply_date
+        d["know_by"]=self.know_by
+        d["staging_start_date"]=self.staging_start_date
+        d["featured"]=self.featured
+        d["project_description"]=self.project_description
+        d["required_skills"]=self.required_skills
+        d["desired_skills"]=self.desired_skills
+        d["language_skills"]=self.language_skills
+        d["language_skills_comments"]=self.language_skills_comments
+        d["volunteers_requested"]=self.volunteers_requested
+        d["accepts_couples"]=self.accepts_couples
+        d["living_conditions_comments"]=self.living_conditions_comments
+        d["country_medical_considerations"]=self.country_medical_considerations
+        d["country_site_url"]=self.country_site_url
+        d["country_flag_image"]=self.country_flag_image
+        d["opening_url"]=self.opening_url
+        d["favorited"]=self.favorited
+        return d
+    }
+    
+    
+}
+func jobFromDictionary(d:Dictionary<String,Any>)->Job{
+    
+    var j=Job()
+    
+    j.title=d["title"]as!String
+    j.req_id=d["req_id"]as!String
+    j.country=d["country"]as!String
+    j.region=d["region"]as!String
+    j.sector=d["sector"]as!String
+    j.apply_date=d["apply_date"]as!String
+    j.know_by=d["know_by"]as!String
+    j.staging_start_date=d["staging_start_date"]as!String
+    j.featured=d["featured"]as!Bool
+    j.project_description=d["project_description"]as!String
+    j.required_skills=d["required_skills"]as!String
+    j.desired_skills=d["desired_skills"]as!String
+    j.language_skills=d["language_skills"]as!String
+    j.language_skills_comments=d["language_skills_comments"]as!String
+    j.volunteers_requested=d["volunteers_requested"]as!Int
+    j.accepts_couples=d["accepts_couples"]as!Bool
+    j.living_conditions_comments=d["living_conditions_comments"]as!String
+    j.country_medical_considerations=d["country_medical_considerations"]as!String
+    j.country_site_url=d["country_site_url"]as!String
+    j.country_flag_image=d["country_flag_image"]as!String
+    j.opening_url=d["opening_url"]as!String
+    j.favorited=d["favorited"]as!Bool
+    return j
+}
+extension String {
+    func toBool() -> Bool? {
+        switch self {
+        case "True", "true", "yes", "1":
+            return true
+        case "False", "false", "no", "0":
+            return false
+        default:
+            return nil
+        }
+    }
 }
 class Node<T>{
     var value: T?
@@ -60,6 +156,7 @@ class JobList{
         }
         self.count++
     }
+    
     
     //make better to string
     func toString(){

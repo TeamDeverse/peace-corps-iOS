@@ -40,5 +40,16 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    // on going to the next view, pass the data along
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "showFavorites") {
+            if let viewController: ListTableController = segue.destinationViewController as? ListTableController {
+                viewController.urlString = ""
+                viewController.showingOnlyFavorites=true
+            }
+            
+        }
+    }
 }
 
