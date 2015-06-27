@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SystemConfiguration
 
 class Singleton {
     var jobList = JobList()
@@ -148,7 +149,17 @@ class Singleton {
     }
 
     func getJSON(urlToRequest: String) -> NSData{
-        return NSData(contentsOfURL: NSURL(string: urlToRequest)!)!
+        // if no connection, the below will cause a crash
+        
+        if Reachability.isConnectedToNetwork(){
+            return NSData(contentsOfURL: NSURL(string: urlToRequest)!)!
+        }
+        else{
+            println("Error: not connected to the internet")
+            // pass in the "default" empty response {"count": 0, "next": null, "previous": null, "results": []}
+            // to be safest, should do that
+            return NSData()
+        }
     }
     func parseJSON(inputData: NSData) -> NSDictionary{
         var error: NSError?
@@ -164,6 +175,12 @@ class Singleton {
     // having the app parse through the desired ones to show
     // The method below makes the server only return what we want.
     func filter(urlInput: String, limitload: Bool){//->[Job]{
+        
+        // protect from error in not having a network connection
+        if Reachability.isConnectedToNetwork()==false{
+            println("No found internet connection")
+            return
+        }
         
         var pgsize = "&page_size=99"
         if limitload == true{
@@ -341,3 +358,29 @@ class Singleton {
 
 }
 
+// check for internet connection
+public class Reachability {
+    // this class is from https://github.com/Isuru-Nanayakkara/IJReachability
+    // released under the MIT license 
+    class func isConnectedToNetwork() -> Bool {
+        
+        var zeroAddress = sockaddr_in(sin_len: 0, sin_family: 0, sin_port: 0, sin_addr: in_addr(s_addr: 0), sin_zero: (0, 0, 0, 0, 0, 0, 0, 0))
+        zeroAddress.sin_len = UInt8(sizeofValue(zeroAddress))
+        zeroAddress.sin_family = sa_family_t(AF_INET)
+        
+        let defaultRouteReachability = withUnsafePointer(&zeroAddress) {
+            SCNetworkReachabilityCreateWithAddress(nil, UnsafePointer($0)).takeRetainedValue()
+        }
+        
+        var flags: SCNetworkReachabilityFlags = 0
+        if SCNetworkReachabilityGetFlags(defaultRouteReachability, &flags) == 0 {
+            return false
+        }
+        
+        let isReachable = (flags & UInt32(kSCNetworkFlagsReachable)) != 0
+        let needsConnection = (flags & UInt32(kSCNetworkFlagsConnectionRequired)) != 0
+        
+        return isReachable && !needsConnection
+    }
+    
+}

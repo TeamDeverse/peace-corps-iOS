@@ -29,7 +29,7 @@ class ListTableController: UITableViewController {
         
         if self.showingOnlyFavorites == false{
             loadLimited=true
-            // show a "load all button", only when pulling from website
+            // show a "load all button", only when pulling from website / when something has loaded
             navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Refresh, target: self, action: "refreshButton")
             // this actually grabs the results! And can be SLOW (hence initially limiting to 25)
             single.filter(self.urlString, limitload: loadLimited)
@@ -45,10 +45,8 @@ class ListTableController: UITableViewController {
     // pressing the icon to refresh all
     func refreshButton() {
         loadLimited = false
-        println("Are we refreshing?")
         single.filter(self.urlString, limitload: loadLimited)
         self.tableView.reloadData()
-        println("refreshed?")
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Refresh, target: self, action: "refreshButton")
         
     }
@@ -79,6 +77,11 @@ class ListTableController: UITableViewController {
 //            }
             else{
                 self.title = "Found \(single.numOfElements()) openings"
+            }
+            
+            if Reachability.isConnectedToNetwork()==false{
+                self.title="No connection"
+                navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Refresh, target: self, action: "refreshButton")
             }
         }
         else{
