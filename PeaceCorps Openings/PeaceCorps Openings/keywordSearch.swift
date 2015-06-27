@@ -10,13 +10,19 @@ import UIKit
 
 class keywordSearch: UIViewController {
     
+    @IBOutlet var extrainfolabel: UILabel!
+    @IBOutlet var buttonNext: UIButton!
     @IBOutlet var searchBar: UISearchBar!
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.becomeFirstResponder()
         //searchBar.delegate = self
         
-        
+        // make it larger on ipads
+        if UIDevice.currentDevice().userInterfaceIdiom == .Pad{
+            extrainfolabel.font = UIFont(name: extrainfolabel.font.fontName, size: 24)
+            buttonNext.titleLabel?.font = UIFont(name: buttonNext.titleLabel!.font.fontName, size: 30)
+        }
         
     }
     
@@ -27,7 +33,6 @@ class keywordSearch: UIViewController {
     }
     
     func searchBarTextDidEndEditing(searchBar: UISearchBar) {
-        println("here2!")
     }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
@@ -37,7 +42,6 @@ class keywordSearch: UIViewController {
     func searchBarShouldReturn(searchBar: UITextField!) -> Bool {   //delegate method
         searchBar.resignFirstResponder()
         // run segue
-        println("here!")
         return true
     }
     

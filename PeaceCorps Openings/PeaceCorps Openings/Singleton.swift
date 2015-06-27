@@ -52,17 +52,17 @@ class Singleton {
         let path = documentsDirectory.stringByAppendingPathComponent("storedJobs")
         let fileManager = NSFileManager.defaultManager()
         //check if file exists
+        println("here?????")
         if(!fileManager.fileExistsAtPath(path)) {
             return // error, plist couldn't be found
         }
         
         let storedJobs = NSMutableDictionary(contentsOfFile: path)
         if let dict = storedJobs {
-            
                 
             jobArray.removeAll(keepCapacity: false)
             for (j, vals) in dict{
-                jobArray.append(jobFromDictionary((vals as? Dictionary<String, AnyObject>)!)) // convert it to a Job!
+                jobArray.append(jobFromDictionary( vals as! NSMutableDictionary )) // convert it to a Job!
             }
             
             
@@ -71,6 +71,7 @@ class Singleton {
         }
         
     }
+    
     
     func setFavotireAtInted(id:Int, favorited: Bool){
         jobArray[id].favorited = favorited
@@ -83,9 +84,16 @@ class Singleton {
         let fileManager = NSFileManager.defaultManager()
         //check if file exists
         if(!fileManager.fileExistsAtPath(path)) {
-            return // error, plist couldn't be found
+            // If it doesn't, copy it from the default file in the Bundle
+            if let bundlePath = NSBundle.mainBundle().pathForResource("storedJobs", ofType: "plist") {
+            let resultDictionary = NSMutableDictionary(contentsOfFile: bundlePath)
+            println("Bundle storedJobs.plist file is --> \(resultDictionary?.description)")
+            fileManager.copyItemAtPath(bundlePath, toPath: path, error: nil)
+            println("copy")
+            } else {
+            println("storedJobs.plist not found. Please, make sure it is part of the bundle.")
+            }
         }
-        
         let storedJobs = NSMutableDictionary(contentsOfFile: path)
         if let dict = storedJobs {
             if jobArray[id].favorited{
@@ -96,7 +104,6 @@ class Singleton {
                 dict[jobArray[id].req_id] = v
                 
                 //dict[jobArray[id].req_id] = dict as NSDictionary
-                println(dict)
                 dict.writeToFile(path, atomically: false)
             }
             else{
@@ -108,8 +115,31 @@ class Singleton {
         } else {
             println("error accessing plist")
         }
+    }
+    
+    func getStoredFavsDict() -> NSMutableDictionary{
+        var b = false
         
-        
+        // setup getting plist
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
+        let documentsDirectory = paths[0] as! String
+        let path = documentsDirectory.stringByAppendingPathComponent("storedJobs")
+        let fileManager = NSFileManager.defaultManager()
+        //check if file exists
+        if(!fileManager.fileExistsAtPath(path)) {
+            // If it doesn't, copy it from the default file in the Bundle
+            if let bundlePath = NSBundle.mainBundle().pathForResource("storedJobs", ofType: "plist") {
+                let resultDictionary = NSMutableDictionary(contentsOfFile: bundlePath)
+                println("Bundle storedJobs.plist file is --> \(resultDictionary?.description)")
+                fileManager.copyItemAtPath(bundlePath, toPath: path, error: nil)
+                println("copy")
+            } else {
+                println("storedJobs.plist not found. Please, make sure it is part of the bundle.")
+            }
+        }
+
+        let ret = NSMutableDictionary(contentsOfFile: path)
+        return ret!
     }
     
     
@@ -133,9 +163,13 @@ class Singleton {
     // the one with NSArray was using a method of grabbing all entries and then
     // having the app parse through the desired ones to show
     // The method below makes the server only return what we want.
-    func filter(urlInput: String){//->[Job]{
+    func filter(urlInput: String, limitload: Bool){//->[Job]{
         
-        iter("http://www.peacecorps.gov/api/v1/openings/?"+urlInput+"&page_size=99")
+        var pgsize = "&page_size=99"
+        if limitload == true{
+            pgsize = "&page_size=25"
+        }
+        iter("http://www.peacecorps.gov/api/v1/openings/?"+urlInput+pgsize, limitload: limitload)
         //var temp = jobList.headNode
         //return jobArray
     }
@@ -190,7 +224,7 @@ class Singleton {
         }
     }*/
 
-    func iter(myUrl: String){
+    func iter(myUrl: String, limitload: Bool){
         
         // clear existing job list
         //jobList = JobList()
@@ -198,10 +232,15 @@ class Singleton {
         var i = 0
         var url = myUrl
         
+        let storedFavs = getStoredFavsDict()
+        
         //find a better constraint ; was 3 before, for "3 pages".
         // should be "while returned != nil" of some kind
-        while (url != "null" || i==10){
-            
+        if limitload==true{
+            i=9 // limit to load only one cell
+        }
+        
+        while (url != "null" && i<10){
             var first = getJSON(url)
             var second = parseJSON(first)
             
@@ -274,15 +313,21 @@ class Singleton {
                     if(key as! NSString == "opening_url"){
                         newJob.opening_url = value as! String
                     }
-                    //println("Property: \(key as String)")
-                    //println("Value: \"\(value)\"")
+                    
+                    
+                    
+                    if (storedFavs.objectForKey(newJob.req_id) != nil){
+                        newJob.favorited = true
+                        // more robust would be to run setFavotireAtInted(id:Int, favorited: Bool)
+                        // as this would also update the plist.
+                        // but not sure if req_id's are ever recycled, or if entries really are
+                        // ever updated (if they aren't, no point wasting time writing back
+                        // to plist)
+                    }
                 }
                 //jobList.insert(newJob)
                 self.jobArray.append(newJob)
             }
-            //println(second["next"] as! NSString)
-            //second = parseJSON(getJSON(second["next"] as! String)) // UN uncomment
-            //println((second["next"]?.length())!)
             i++
             if second["next"] is NSNull{
                 break

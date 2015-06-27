@@ -17,13 +17,23 @@ class ListTableController: UITableViewController {
     var urlString:String!
     var showingOnlyFavorites:Bool!
     
+    // at first, cap the number of responses to return for faster viewing
+    var loadLimited = false
+    
     var temp: Job!
     var tempIndex = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         if self.showingOnlyFavorites == false{
-            single.filter(self.urlString)
+            loadLimited=true
+            // show a "load all button", only when pulling from website
+            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Refresh, target: self, action: "refreshButton")
+            // this actually grabs the results! And can be SLOW (hence initially limiting to 25)
+            single.filter(self.urlString, limitload: loadLimited)
+            
         }
         else{
             single.showFavorites()
@@ -32,23 +42,47 @@ class ListTableController: UITableViewController {
         
     }
     
+    // pressing the icon to refresh all
+    func refreshButton() {
+        loadLimited = false
+        println("Are we refreshing?")
+        single.filter(self.urlString, limitload: loadLimited)
+        self.tableView.reloadData()
+        println("refreshed?")
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Refresh, target: self, action: "refreshButton")
+        
+    }
+    
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //let shared = single.numOfElements()
-        if single.numOfElements()==0{
-            self.title = "No results found"
-        }
-        else if single.numOfElements()==1{
-            self.title = "Found \(single.numOfElements()) opening"
-        }
-        else if single.numOfElements()==99{
-            self.title = "Found \(single.numOfElements())+ openings"
+        if self.showingOnlyFavorites == false{
+            if single.numOfElements()==0{
+                self.title = "No results found"
+            }
+            else if (single.numOfElements()==25 && loadLimited){
+                self.title = "25+ openings"
+                
+                if self.showingOnlyFavorites == false{
+                    navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Load All", style: UIBarButtonItemStyle.Plain, target: self, action: "refreshButton")
+                }
+            }
+            else if single.numOfElements()==1{
+                self.title = "Found \(single.numOfElements()) opening"
+            }
+//            else if single.numOfElements()==99{
+//                self.title = "Found \(single.numOfElements())+ openings"
+//            }
+            else{
+                self.title = "Found \(single.numOfElements()) openings"
+            }
         }
         else{
-            self.title = "Found \(single.numOfElements()) openings"
+            self.title = "Stored Favorites"
         }
         return single.numOfElements()
     }
@@ -119,12 +153,6 @@ class ListTableController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if (segue.identifier == "toResult") {
-            
-            // skip to the right place in the head
-            //var temp1 = fitting.headNode
-            //for var i = 0; i < (tempIndex); ++i {
-            //    temp1 = temp1.next!
-            //}
             
             // Assign the variable to the value from the node here
             // instead of all this.. just pass the job INDEX in the singleton.

@@ -22,6 +22,8 @@
             <string>NeutrafaceText-Book</string>
             <string>NeutrafaceText-Book</string>
             <string>NeutrafaceText-Book</string>
+            <string>NeutrafaceText-Book</string>
+            <string>NeutrafaceText-Book</string>
         </mutableArray>
         <mutableArray key="NeutraText-BookItalic.otf">
             <string>NeutrafaceText-BookItalic</string>
@@ -357,7 +359,7 @@
 
 Team Leaders: Roseanna Chu (iOS) and Robbie Li (Android)
 iOS Team Members: Joe Carle, Jeffrey Cheng, Jonathan Ho, Henrique Kim, Min Kyung Kim, Bonnie Plausteiner
-Team Deverse Representatives: Patrick W. Crawford, Habib Khan, Kevin Mannix, Bert Shao
+Team Deverse Representatives: Patrick W. Crawford, Habib Khan, Kevin Mannix, Bert Shao, YC Lee, Jacqueline Chau
 Peace Corps Representatives: Dan Ingala, Katrina Browser</string>
                                 <fontDescription key="fontDescription" name="NeutrafaceText-Book" family="Neutraface Text" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -794,6 +796,7 @@ Peace Corps Representatives: Dan Ingala, Katrina Browser</string>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="wnV-Ha-7rm" secondAttribute="height" multiplier="80:11" id="3P4-tH-POg"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="NeutrafaceText-Book" family="Neutraface Text" pointSize="18"/>
                                 <state key="normal" title="Search for Listings">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -803,20 +806,34 @@ Peace Corps Representatives: Dan Ingala, Katrina Browser</string>
                                     <segue destination="7Sc-LX-jBw" kind="show" identifier="fromKeyToTable" id="Gm9-BB-1EC"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Results from search querries return exact matches to the provided keyphrase" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="288" translatesAutoresizingMaskIntoConstraints="NO" id="LQp-Mc-yQi">
+                                <rect key="frame" x="16" y="205" width="288" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="LQp-Mc-yQi" secondAttribute="height" multiplier="144:43" constant="70.32558139534882" id="0UY-Gh-qU8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NeutrafaceText-Book" family="Neutraface Text" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.88235294119999996" green="0.87450980389999999" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="LQp-Mc-yQi" firstAttribute="leading" secondItem="e58-lW-rtu" secondAttribute="leadingMargin" id="CSl-Re-bsG"/>
                             <constraint firstItem="wnV-Ha-7rm" firstAttribute="leading" secondItem="e58-lW-rtu" secondAttribute="leading" id="H9V-4g-Ozf"/>
                             <constraint firstItem="jM1-e2-gGH" firstAttribute="leading" secondItem="e58-lW-rtu" secondAttribute="leading" id="Ka5-dc-Ilq"/>
+                            <constraint firstItem="LQp-Mc-yQi" firstAttribute="trailing" secondItem="e58-lW-rtu" secondAttribute="trailingMargin" id="Pjd-ud-fue"/>
                             <constraint firstAttribute="trailing" secondItem="jM1-e2-gGH" secondAttribute="trailing" id="QFI-yZ-bBu"/>
                             <constraint firstItem="wnV-Ha-7rm" firstAttribute="top" secondItem="jM1-e2-gGH" secondAttribute="bottom" constant="24" id="ScA-ex-Ii3"/>
                             <constraint firstAttribute="trailing" secondItem="wnV-Ha-7rm" secondAttribute="trailing" id="ebk-8T-Gn6"/>
                             <constraint firstItem="jM1-e2-gGH" firstAttribute="top" secondItem="qqm-Bz-ZMq" secondAttribute="bottom" constant="21" id="qPw-pR-ox9"/>
+                            <constraint firstItem="LQp-Mc-yQi" firstAttribute="top" secondItem="wnV-Ha-7rm" secondAttribute="bottom" constant="8" id="s04-2J-Uq3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="s3k-b4-2MI"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="buttonNext" destination="wnV-Ha-7rm" id="0wp-xd-lUX"/>
+                        <outlet property="extrainfolabel" destination="LQp-Mc-yQi" id="V7o-Y7-JRG"/>
                         <outlet property="searchBar" destination="jM1-e2-gGH" id="WQI-X5-Bxi"/>
                     </connections>
                 </viewController>
@@ -1000,6 +1017,6 @@ Peace Corps Representatives: Dan Ingala, Katrina Browser</string>
         <image name="third.jpg" width="320" height="169"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aXq-Zq-P0w"/>
+        <segue reference="Gm9-BB-1EC"/>
     </inferredMetricsTieBreakers>
 </document>
