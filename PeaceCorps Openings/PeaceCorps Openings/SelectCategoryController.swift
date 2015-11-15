@@ -133,7 +133,7 @@ class SelectCategoryController: UIViewController, UICollectionViewDelegateFlowLa
                         regionstring = regionstring+"region="+locations[state].0+"&"
                     }
                 }
-                regionstring = dropLast(regionstring) // don't include the last &
+                regionstring = String(regionstring.characters.dropLast()) // don't include the last &
             }
             
             if let viewController: SelectSectorController = segue.destinationViewController as? SelectSectorController {

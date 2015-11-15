@@ -34,7 +34,7 @@ class ResultEntryController: UIViewController {
         
         // make it larger on ipads
         if UIDevice.currentDevice().userInterfaceIdiom == .Pad{
-            descriptionTextView.font = UIFont(name: descriptionTextView.font.fontName, size: 22)
+            descriptionTextView.font = UIFont(name: descriptionTextView.font!.fontName, size: 22)
         }
         
     }

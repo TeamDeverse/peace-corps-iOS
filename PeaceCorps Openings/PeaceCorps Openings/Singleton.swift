@@ -21,7 +21,7 @@ class Singleton {
         }
         
         dispatch_once(&Static.onceToken) {
-            Static.instance = self()
+            Static.instance = self.init()
         }
         
         return Static.instance!
@@ -38,7 +38,7 @@ class Singleton {
         return jobArray[id]
     }
     func setJobAtIndex(id:Int, updateJob:Job){
-        var samestate = (jobArray[id].favorited == updateJob.favorited)
+        let samestate = (jobArray[id].favorited == updateJob.favorited)
         jobArray[id] = updateJob
         // check if favorited changed
         if samestate == false{
@@ -53,7 +53,7 @@ class Singleton {
         let path = documentsDirectory.stringByAppendingPathComponent("storedJobs")
         let fileManager = NSFileManager.defaultManager()
         //check if file exists
-        println("here?????")
+        print("here?????")
         if(!fileManager.fileExistsAtPath(path)) {
             return // error, plist couldn't be found
         }
@@ -68,7 +68,7 @@ class Singleton {
             
             
         } else {
-            println("error accessing plist")
+            print("error accessing plist")
         }
         
     }
@@ -88,11 +88,14 @@ class Singleton {
             // If it doesn't, copy it from the default file in the Bundle
             if let bundlePath = NSBundle.mainBundle().pathForResource("storedJobs", ofType: "plist") {
             let resultDictionary = NSMutableDictionary(contentsOfFile: bundlePath)
-            println("Bundle storedJobs.plist file is --> \(resultDictionary?.description)")
-            fileManager.copyItemAtPath(bundlePath, toPath: path, error: nil)
-            println("copy")
+            print("Bundle storedJobs.plist file is --> \(resultDictionary?.description)")
+            do {
+                try fileManager.copyItemAtPath(bundlePath, toPath: path)
+            } catch _ {
+            }
+            print("copy")
             } else {
-            println("storedJobs.plist not found. Please, make sure it is part of the bundle.")
+            print("storedJobs.plist not found. Please, make sure it is part of the bundle.")
             }
         }
         let storedJobs = NSMutableDictionary(contentsOfFile: path)
@@ -114,7 +117,7 @@ class Singleton {
             }
             
         } else {
-            println("error accessing plist")
+            print("error accessing plist")
         }
     }
     
@@ -125,17 +128,21 @@ class Singleton {
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
         let documentsDirectory = paths[0] as! String
         let path = documentsDirectory.stringByAppendingPathComponent("storedJobs")
+    
         let fileManager = NSFileManager.defaultManager()
         //check if file exists
         if(!fileManager.fileExistsAtPath(path)) {
             // If it doesn't, copy it from the default file in the Bundle
             if let bundlePath = NSBundle.mainBundle().pathForResource("storedJobs", ofType: "plist") {
                 let resultDictionary = NSMutableDictionary(contentsOfFile: bundlePath)
-                println("Bundle storedJobs.plist file is --> \(resultDictionary?.description)")
-                fileManager.copyItemAtPath(bundlePath, toPath: path, error: nil)
-                println("copy")
+                print("Bundle storedJobs.plist file is --> \(resultDictionary?.description)")
+                do {
+                    try fileManager.copyItemAtPath(bundlePath, toPath: path)
+                } catch _ {
+                }
+                print("copy")
             } else {
-                println("storedJobs.plist not found. Please, make sure it is part of the bundle.")
+                print("storedJobs.plist not found. Please, make sure it is part of the bundle.")
             }
         }
 
@@ -155,7 +162,7 @@ class Singleton {
             return NSData(contentsOfURL: NSURL(string: urlToRequest)!)!
         }
         else{
-            println("Error: not connected to the internet")
+            print("Error: not connected to the internet")
             // pass in the "default" empty response {"count": 0, "next": null, "previous": null, "results": []}
             // to be safest, should do that
             return NSData()
@@ -163,7 +170,7 @@ class Singleton {
     }
     func parseJSON(inputData: NSData) -> NSDictionary{
         var error: NSError?
-        var boardsDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(inputData, options: NSJSONReadingOptions.MutableContainers, error: &error) as! NSDictionary
+        let boardsDictionary: NSDictionary = (try! NSJSONSerialization.JSONObjectWithData(inputData, options: NSJSONReadingOptions.MutableContainers)) as! NSDictionary
         
         return boardsDictionary
     }
@@ -178,7 +185,7 @@ class Singleton {
         
         // protect from error in not having a network connection
         if Reachability.isConnectedToNetwork()==false{
-            println("No found internet connection")
+            print("No found internet connection")
             return
         }
         
@@ -258,10 +265,10 @@ class Singleton {
         }
         
         while (url != "null" && i<10){
-            var first = getJSON(url)
-            var second = parseJSON(first)
+            let first = getJSON(url)
+            let second = parseJSON(first)
             
-            var dataArray = second["results"]as! NSArray
+            let dataArray = second["results"]as! NSArray
             
             for item in dataArray { // loop through data items
                 let obj = item as! NSDictionary
@@ -364,23 +371,34 @@ public class Reachability {
     // released under the MIT license 
     class func isConnectedToNetwork() -> Bool {
         
-        var zeroAddress = sockaddr_in(sin_len: 0, sin_family: 0, sin_port: 0, sin_addr: in_addr(s_addr: 0), sin_zero: (0, 0, 0, 0, 0, 0, 0, 0))
-        zeroAddress.sin_len = UInt8(sizeofValue(zeroAddress))
-        zeroAddress.sin_family = sa_family_t(AF_INET)
-        
-        let defaultRouteReachability = withUnsafePointer(&zeroAddress) {
-            SCNetworkReachabilityCreateWithAddress(nil, UnsafePointer($0)).takeRetainedValue()
-        }
-        
-        var flags: SCNetworkReachabilityFlags = 0
-        if SCNetworkReachabilityGetFlags(defaultRouteReachability, &flags) == 0 {
-            return false
-        }
-        
-        let isReachable = (flags & UInt32(kSCNetworkFlagsReachable)) != 0
-        let needsConnection = (flags & UInt32(kSCNetworkFlagsConnectionRequired)) != 0
-        
-        return isReachable && !needsConnection
+//        var zeroAddress = sockaddr_in(sin_len: 0, sin_family: 0, sin_port: 0, sin_addr: in_addr(s_addr: 0), sin_zero: (0, 0, 0, 0, 0, 0, 0, 0))
+//        zeroAddress.sin_len = UInt8(sizeofValue(zeroAddress))
+//        zeroAddress.sin_family = sa_family_t(AF_INET)
+//        
+//        let defaultRouteReachability = withUnsafePointer(&zeroAddress) {
+//            SCNetworkReachabilityCreateWithAddress(nil, UnsafePointer($0)).takeRetainedValue()
+//        }
+//        
+//        var flags: SCNetworkReachabilityFlags = 0
+//        if SCNetworkReachabilityGetFlags(defaultRouteReachability, &flags) == 0 {
+//            return false
+//        }
+//        
+//        let isReachable = (flags & UInt32(kSCNetworkFlagsReachable)) != 0
+//        let needsConnection = (flags & UInt32(kSCNetworkFlagsConnectionRequired)) != 0
+//        
+//        return isReachable && !needsConnection
+        return true
     }
+
+}
+
+extension String {
     
+    func stringByAppendingPathComponent(path: String) -> String {
+        
+        let nsSt = self as NSString
+        
+        return nsSt.stringByAppendingPathComponent(path)
+    }
 }

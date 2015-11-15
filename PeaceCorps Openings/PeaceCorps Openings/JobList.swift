@@ -58,7 +58,7 @@ struct Job{
     // define the functions
     func toDictionary() -> NSMutableDictionary{
         //var d = Dictionary<String, Any>()
-        var d=NSMutableDictionary()
+        let d=NSMutableDictionary()
         d.setObject(self.title, forKey: "title")
         d.setObject(self.req_id, forKey: "req_id")
         d.setObject(self.country, forKey: "country")
@@ -199,7 +199,7 @@ class JobList{
     }
     
     func insert(value: Job) {
-        var node = Node<Job>(value: value)
+        let node = Node<Job>(value: value)
         if self.isEmpty() {
             self.headNode = node
             self.lastNode = node
@@ -217,13 +217,13 @@ class JobList{
         var i = 0
         while (myNode.next != nil){
             if let myOtherNode = myNode.value{
-                println("\(i). \(myOtherNode.country) \(myOtherNode.region) \(myOtherNode.apply_date)")
+                print("\(i). \(myOtherNode.country) \(myOtherNode.region) \(myOtherNode.apply_date)")
                 i++
                 myNode = myNode.next!
             }
         }
         if let myOtherNode = myNode.value{
-            println("\(i). \(myOtherNode.country) \(myOtherNode.region) \(myOtherNode.apply_date)")
+            print("\(i). \(myOtherNode.country) \(myOtherNode.region) \(myOtherNode.apply_date)")
         }
 }
 //    init(headNode: Node<Job>, lastNode: Node<Job>){

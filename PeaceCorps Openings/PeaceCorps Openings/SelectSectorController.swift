@@ -133,7 +133,7 @@ class SelectSectorController: UIViewController, UICollectionViewDataSource {
                         sectorstring = sectorstring+"sector="+sectors[state].0+"&"
                     }
                 }
-                sectorstring = dropLast(sectorstring) // don't include the last &
+                sectorstring = String(sectorstring.characters.dropLast()) // don't include the last &
             }
             
             //println("Sectors:")

@@ -285,6 +285,8 @@
 		96F3DFC31ADDB0DE009F30AA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = GAI;
 				TargetAttributes = {

@@ -42,7 +42,7 @@ class SelectCategoryView: UIViewController {
         return sectorArray
     }
     @IBAction func AnythingSector(sender: AnyObject) {
-        if(!contains(sectorArray,"anything")){
+        if(!sectorArray.contains("anything")){
             sectorArray = []
             sectorArray.append("anything")
             AnythingS.tintColor = UIColor.redColor()
@@ -55,70 +55,70 @@ class SelectCategoryView: UIViewController {
     }
     
     @IBAction func AgricultureSector(sender: AnyObject) {
-        if(contains(sectorArray, "anything")){
+        if(sectorArray.contains("anything")){
             sectorArray = []
             sectorArray.append("Agriculture")
             AnythingS.tintColor = UIColor.blueColor()
             AgricultureS.tintColor = UIColor.redColor()
         }
         else{
-            if(!contains(sectorArray,"Agriculture")){
+            if(!sectorArray.contains("Agriculture")){
                 sectorArray.append("Agriculture")
                 AgricultureS.tintColor = UIColor.redColor()
             }
         }
     }
     @IBAction func EducationSector(sender: AnyObject) {
-        if(contains(sectorArray, "anything")){
+        if(sectorArray.contains("anything")){
             sectorArray = []
             sectorArray.append("Education")
             AnythingS.tintColor = UIColor.blueColor()
             EducationS.tintColor = UIColor.redColor()
         }
         else{
-            if(!contains(sectorArray,"Education")){
+            if(!sectorArray.contains("Education")){
                 sectorArray.append("Education")
                 EducationS.tintColor = UIColor.redColor()
             }
         }
     }
     @IBAction func EnvironmentSector(sender: AnyObject) {
-        if(contains(sectorArray, "anything")){
+        if(sectorArray.contains("anything")){
             sectorArray = []
             sectorArray.append("Environment")
             AnythingS.tintColor = UIColor.blueColor()
             EnvironmentS.tintColor = UIColor.redColor()
         }
         else{
-            if(!contains(sectorArray,"Environment")){
+            if(!sectorArray.contains("Environment")){
                 sectorArray.append("Environment")
                 EnvironmentS.tintColor = UIColor.redColor()
             }
         }
     }
     @IBAction func HealthSector(sender: AnyObject) {
-        if(contains(sectorArray, "anything")){
+        if(sectorArray.contains("anything")){
             sectorArray = []
             sectorArray.append("Health")
             AnythingS.tintColor = UIColor.blueColor()
             HealthS.tintColor = UIColor.redColor()
         }
         else{
-            if(!contains(sectorArray,"Health")){
+            if(!sectorArray.contains("Health")){
                 sectorArray.append("Health")
                 HealthS.tintColor = UIColor.redColor()
             }
         }
     }
     @IBAction func YouthSector(sender: AnyObject) {
-        if(contains(sectorArray, "anything")){
+        if(sectorArray.contains("anything")){
             sectorArray = []
             sectorArray.append("Youth")
             AnythingS.tintColor = UIColor.blueColor()
             YouthS.tintColor = UIColor.redColor()
         }
         else{
-            if(!contains(sectorArray,"Youth")){
+            if(!sectorArray.contains("Youth")){
                 sectorArray.append("Youth")
                 YouthS.tintColor = UIColor.redColor()
             }
@@ -126,14 +126,14 @@ class SelectCategoryView: UIViewController {
     }
     @IBAction func CommunitySector(sender: AnyObject) {
 //        println("Community")
-        if(contains(sectorArray, "anything")){
+        if(sectorArray.contains("anything")){
             sectorArray = []
             sectorArray.append("Community Economic Development")
             AnythingS.tintColor = UIColor.blueColor()
             CommunityS.tintColor = UIColor.redColor()
         }
         else{
-            if(!contains(sectorArray,"Community Economic Development")){
+            if(!sectorArray.contains("Community Economic Development")){
                 sectorArray.append("Community Economic Development")
                 CommunityS.tintColor = UIColor.redColor()
             }
@@ -142,8 +142,8 @@ class SelectCategoryView: UIViewController {
     
     @IBAction func Search(sender: AnyObject) {
 //        println("Search")
-        println(regionArray)
-        println(sectorArray)
+        print(regionArray)
+        print(sectorArray)
         
         // SEND to the next view, the table
         // singleton.filter(regionArray, sectorArray: sectorArray) // deleted this
@@ -151,7 +151,7 @@ class SelectCategoryView: UIViewController {
     }
 
     @IBAction func AnywhereRegion(sender: AnyObject) {
-        if(!contains(regionArray,"anywhere")){
+        if(!regionArray.contains("anywhere")){
             regionArray = []
             regionArray.append("anywhere")
             AnywhereView.tintColor = UIColor.redColor()
@@ -165,14 +165,14 @@ class SelectCategoryView: UIViewController {
         }
     }
     @IBAction func AfricaRegion(sender: AnyObject) {
-        if(contains(regionArray, "anywhere")){
+        if(regionArray.contains("anywhere")){
             regionArray = []
             regionArray.append("africa")
             AnywhereView.tintColor = UIColor.blueColor()
             AfricaView.tintColor = UIColor.redColor()
         }
         else{
-            if(!contains(regionArray,"africa")){
+            if(!regionArray.contains("africa")){
                 regionArray.append("africa")
                 AfricaView.tintColor = UIColor.redColor()
             }
@@ -180,84 +180,84 @@ class SelectCategoryView: UIViewController {
     }
     
     @IBAction func AsiaRegion(sender: AnyObject) {
-        if(contains(regionArray, "anywhere")){
+        if(regionArray.contains("anywhere")){
             regionArray = []
             regionArray.append("asia")
             AnywhereView.tintColor = UIColor.blueColor()
             AsiaView.tintColor = UIColor.redColor()
         }
         else{
-            if(!contains(regionArray,"asia")){
+            if(!regionArray.contains("asia")){
                 regionArray.append("asia")
                 AsiaView.tintColor = UIColor.redColor()
             }
         }
     }
     @IBAction func Europe(sender: AnyObject) {
-        if(contains(regionArray, "anywhere")){
+        if(regionArray.contains("anywhere")){
             regionArray = []
             regionArray.append("europe")
             AnywhereView.tintColor = UIColor.blueColor()
             Europe.tintColor = UIColor.redColor()
         }
         else{
-            if(!contains(regionArray,"europe")){
+            if(!regionArray.contains("europe")){
                 regionArray.append("europe")
                 Europe.tintColor = UIColor.redColor()
             }
         }
     }
     @IBAction func NorthAfrica(sender: AnyObject) {
-        if(contains(regionArray, "anywhere")){
+        if(regionArray.contains("anywhere")){
             regionArray = []
             regionArray.append("africa")
             AnywhereView.tintColor = UIColor.blueColor()
             NorthAfrica.tintColor = UIColor.redColor()
         }
         else{
-            if(!contains(regionArray,"africa")){
+            if(!regionArray.contains("africa")){
                 regionArray.append("africa")
                 NorthAfrica.tintColor = UIColor.redColor()
             }
         }
     }
     @IBAction func Carribean(sender: AnyObject) {
-        if(contains(regionArray, "anywhere")){
+        if(regionArray.contains("anywhere")){
             regionArray = []
             regionArray.append("carribean")
             AnywhereView.tintColor = UIColor.blueColor()
             CarribeanView.tintColor = UIColor.redColor()
         }
         else{
-            if(!contains(regionArray,"carribean")){
+            if(!regionArray.contains("carribean")){
                 regionArray.append("carribean")
                 CarribeanView.tintColor = UIColor.redColor()
             }
         }
     }
     @IBAction func PacificIslands(sender: AnyObject) {
-        if(contains(regionArray, "anywhere")){
+        if(regionArray.contains("anywhere")){
             regionArray = []
             regionArray.append("pacificislands")
             AnywhereView.tintColor = UIColor.blueColor()
             PacificIslandsView.tintColor = UIColor.redColor()
         }
         else{
-            if(!contains(regionArray,"pacificislands")){
+            if(!regionArray.contains("pacificislands")){
                 regionArray.append("pacificislands")
                 PacificIslandsView.tintColor = UIColor.redColor()
             }
         }
     }
     @IBAction func CentralAmericaMexico(sender: AnyObject) {
-        if(contains(regionArray, "anywhere")){
+        if(regionArray.contains("anywhere")){
             regionArray = []
             regionArray.append("centralamerica")
             AnywhereView.tintColor = UIColor.blueColor()
             CentralAmericaMexicoView.tintColor = UIColor.redColor()
         }
         else{
-            if(!contains(regionArray,"centralamerica")){
+            if(!regionArray.contains("centralamerica")){
                 regionArray.append("centralamerica")
                 CentralAmericaMexicoView.tintColor = UIColor.redColor()
             }

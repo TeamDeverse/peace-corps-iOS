@@ -51,7 +51,7 @@ class keywordSearch: UIViewController {
             // combine together into one string the region data
             // then start segue to next view
             var sectorstring = searchBar.text
-            let newString = sectorstring.stringByReplacingOccurrencesOfString(" ", withString: "%20", options: NSStringCompareOptions.LiteralSearch, range: nil)
+            let newString = sectorstring!.stringByReplacingOccurrencesOfString(" ", withString: "%20", options: NSStringCompareOptions.LiteralSearch, range: nil)
             
             if let viewController: ListTableController = segue.destinationViewController as? ListTableController {
                 viewController.urlString = "keyword="+newString
